@@ -64,6 +64,8 @@ PredTest <- predict(TitanicRF, newdata=test, type="response")
 MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
 write.csv(MySubmission, "Submission.csv", row.names=FALSE)
 
+
+
 table(train$Survived, train$Sex)
 female <- subset(train, Sex == "female")
 table(female$Survived, female$Parch)
