@@ -29,31 +29,13 @@ Formating the Data
 
 ```{r}
 train$Survived <- as.factor(train$Survived)
-```
-
-```{r}
 train$Pclass <- as.factor(train$Pclass)
-```
-
-```{r}
 train$Embarked <- as.character(train$Embarked)
-```
-
-```{r}
-train$Title <- as.factor(train$Title)
-```
-
-```{r}
+#train$Title <- as.factor(train$Title)
 test$Pclass <- as.factor(test$Pclass)
-```
-
-```{r}
 test$Embarked <- as.character(test$Embarked)
+#test$Title <- as.factor(test$Title)
 ```
-
-```{r}
-test$Title <- as.factor(test$Title)
-``` 
 
 ```{r}
 listacc <- NULL
@@ -62,7 +44,7 @@ set.seed=202
 split <- sample.split(train$Survived, SplitRatio = 0.7)
 Titanictrain <- subset(train, split == TRUE)
 Titanictest <- subset(train, split == FALSE)
-TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch + Title, data = Titanictrain, nodesize = 50, ntree = 2000)
+TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch, data = Titanictrain, nodesize = 50, ntree = 2000)
 PredictRF <- predict(TitanicRF, newdata = Titanictest)
 tabla <- table(Titanictest$Survived, PredictRF)
 acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
