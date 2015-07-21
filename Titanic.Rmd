@@ -1,0 +1,131 @@
+---
+title: "Kaggle - Analysis with Titatic Data"
+author: "Isaac Yauri"
+date: "Monday, July 20, 2015"
+output: html_document
+---
+
+# Titanic Case
+
+```{r}
+train <- read.csv("train.csv")
+test <- read.csv("test.csv")
+```
+
+Loading Libraries
+
+```{r}
+library(rpart)
+library(rpart.plot)
+library(caTools)
+library(ROCR)
+library(caret)
+library(e1071)
+library(randomForest)
+library(flexclust)
+```
+
+Formating the Data
+
+```{r}
+train$Survived <- as.factor(train$Survived)
+```
+
+```{r}
+train$Pclass <- as.factor(train$Pclass)
+```
+
+```{r}
+train$Embarked <- as.character(train$Embarked)
+```
+
+```{r}
+train$Title <- as.factor(train$Title)
+```
+
+```{r}
+test$Pclass <- as.factor(test$Pclass)
+```
+
+```{r}
+test$Embarked <- as.character(test$Embarked)
+```
+
+```{r}
+test$Title <- as.factor(test$Title)
+``` 
+
+```{r}
+listacc <- NULL
+for (i in (202:202)) {
+set.seed=202
+split <- sample.split(train$Survived, SplitRatio = 0.7)
+Titanictrain <- subset(train, split == TRUE)
+Titanictest <- subset(train, split == FALSE)
+TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch + Title, data = Titanictrain, nodesize = 50, ntree = 2000)
+PredictRF <- predict(TitanicRF, newdata = Titanictest)
+tabla <- table(Titanictest$Survived, PredictRF)
+acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
+#cat("set.seed=",i," acc=",acc,"\n")
+listacc[i] <- acc
+if (i %% 100 == 0) { cat(i)}
+}
+acc
+tabla
+plot(listacc)
+max(listacc)
+which.max(listacc)
+```
+
+```{r}
+PredTest <- predict(TitanicRF, newdata=test, type="response")
+MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
+write.csv(MySubmission, "Submission.csv", row.names=FALSE)
+
+table(train$Survived, train$Sex)
+female <- subset(train, Sex == "female")
+table(female$Survived, female$Parch)
+str(train)
+table(train$Parch, train$Survived)
+summary(TitanicRF)
+table(train$Age)
+summary(train$Age)
+```
+
+```{r}
+train$Title <- NA
+test$Title <- NA
+
+train$Title[grep("Master.", train$Name)] <- "Master."
+train$Title[grep("Miss", train$Name)] <- "Miss."
+train$Title[grep("Mr.", train$Name)] <- "Mr."
+train$Title[grep("Mrs.", train$Name)] <- "Mrs."
+train$Title[grep("Rev.", train$Name)] <- "Rev."
+train$Title[grep("Don.", train$Name)] <- "Don."
+train$Title[grep("Dr.", train$Name)] <- "Dr."
+train$Title[grep("Major.", train$Name)] <- "Major."
+train$Title[grep("Jonkheer", train$Name)] <- "Jonkheer"
+train$Title[grep("Col.", train$Name)] <- "Col."
+
+test$Title[grep("Master.", test$Name)] <- "Master."
+test$Title[grep("Miss", test$Name)] <- "Miss."
+test$Title[grep("Mr.", test$Name)] <- "Mr."
+test$Title[grep("Mrs.", test$Name)] <- "Mrs."
+test$Title[grep("Rev.", test$Name)] <- "Rev."
+test$Title[grep("Don.", test$Name)] <- "Don."
+test$Title[grep("Dr.", test$Name)] <- "Dr."
+test$Title[grep("Major.", test$Name)] <- "Major."
+test$Title[grep("Jonkheer", test$Name)] <- "Jonkheer"
+test$Title[grep("Col.", test$Name)] <- "Col."
+
+table(train$Title, train$Survived)
+table(test$Title)
+
+table(train$Age, train$Title)
+summary(test$Age)      
+table(train$Title == "Major.")
+train[train$Title == "Master.",]
+train[is.na(train$Age)  & train$Title == "Master.",] 
+```
+
+
