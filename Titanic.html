@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>Titanic Case</title>
+<title>Titanic: Machine Learning from Disaster</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -201,7 +201,21 @@ hr {
 </head>
 
 <body>
-<h1>Titanic Case</h1>
+<h1>Titanic: Machine Learning from Disaster</h1>
+
+<p>Source: <a href="https://www.kaggle.com/c/titanic">https://www.kaggle.com/c/titanic</a></p>
+
+<p>Predict survival on the Titanic (using Excel, Python, R, and Random Forests)</p>
+
+<p>See best practice code and explore visualizations of the Titanic dataset on Kaggle Scripts. Submit directly to the competition, no data download or local environment needed!</p>
+
+<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history.  On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
+
+<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
+
+<p>In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply the tools of machine learning to predict which passengers survived the tragedy.</p>
+
+<p>We start loading the data set.</p>
 
 <pre><code class="r">train &lt;- read.csv(&quot;train.csv&quot;)
 test &lt;- read.csv(&quot;test.csv&quot;)
@@ -210,13 +224,94 @@ test &lt;- read.csv(&quot;test.csv&quot;)
 <p>Loading Libraries</p>
 
 <pre><code class="r">library(rpart)
-library(rpart.plot)
-library(caTools)
-library(ROCR)
-library(caret)
-library(e1071)
-library(randomForest)
-library(flexclust)
+</code></pre>
+
+<pre><code>## Warning: package &#39;rpart&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code class="r">library(rpart.plot)
+</code></pre>
+
+<pre><code>## Warning: package &#39;rpart.plot&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code class="r">library(caTools)
+</code></pre>
+
+<pre><code>## Warning: package &#39;caTools&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code class="r">library(ROCR)
+</code></pre>
+
+<pre><code>## Warning: package &#39;ROCR&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code>## Loading required package: gplots
+</code></pre>
+
+<pre><code>## Warning: package &#39;gplots&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code>## 
+## Attaching package: &#39;gplots&#39;
+## 
+## The following object is masked from &#39;package:stats&#39;:
+## 
+##     lowess
+</code></pre>
+
+<pre><code class="r">library(caret)
+</code></pre>
+
+<pre><code>## Warning: package &#39;caret&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code>## Loading required package: lattice
+## Loading required package: ggplot2
+</code></pre>
+
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code>## 
+## Attaching package: &#39;ggplot2&#39;
+## 
+## The following object is masked _by_ &#39;.GlobalEnv&#39;:
+## 
+##     msleep
+</code></pre>
+
+<pre><code class="r">library(e1071)
+</code></pre>
+
+<pre><code>## Warning: package &#39;e1071&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code class="r">library(randomForest)
+</code></pre>
+
+<pre><code>## Warning: package &#39;randomForest&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code>## randomForest 4.6-10
+## Type rfNews() to see new features/changes/bug fixes.
+</code></pre>
+
+<pre><code class="r">library(flexclust)
+</code></pre>
+
+<pre><code>## Warning: package &#39;flexclust&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code>## Loading required package: grid
+## Loading required package: modeltools
+</code></pre>
+
+<pre><code>## Warning: package &#39;modeltools&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code>## Loading required package: stats4
 </code></pre>
 
 <p>Formating the Data</p>
@@ -247,7 +342,7 @@ if (i %% 100 == 0) { cat(i)}
 acc
 </code></pre>
 
-<pre><code>## [1] 0.7574627
+<pre><code>## [1] 0.7798507
 </code></pre>
 
 <pre><code class="r">tabla
@@ -255,14 +350,14 @@ acc
 
 <pre><code>##    PredictRF
 ##       0   1
-##   0 142  23
-##   1  42  61
+##   0 145  20
+##   1  39  64
 </code></pre>
 
 <pre><code class="r">plot(listacc)
 </code></pre>
 
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAAAclBMVEX9/v0AAAAAADkAAGUAOWUAOY8AZrU5AAA5ADk5AGU5OY85ZrU5j9plAABlADllAGVlOQBlZmVltf2POQCPOTmPOWWPZgCPjzmPtY+P29qP2/21ZgC1/rW1/v3ajzna/tra/v39tWX924/9/rX9/tr9/v3YFsyJAAAAJnRSTlP/////////////////////////////////////////////////AKd6gbwAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAiKSURBVHic7d1td5pIAEDhYjdmk9Vml6T7ItUGlf//FxfQpE1NzgGZccB7n9Nzul92wN4gExNmPlVC+pT6BJSG4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhhoTPNGYRww/4fxWb4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocaHH572y6X93ndd2glNTT8/jFv/y5vnnsOraSGht89rN/83X1oJeUVDzX4Hr9beo+fImf1UIaHChX+p8ldxxXRlZRXPJThoQwPZXiowZ/cLY8zudNv5A0/ZoOv+P3j4ryhldTwt/rdl9VZQysp7/FQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FDDwxftUrZ576GV1ODwRZ18k1fFvO/QSirIvnPb+2f3nZuYwfvOPa2qqpy779zUBNl37ua5nJ0uYW34MXNWD2V4KPedg/KKhzI81ODw21t3k54i94+HCvLJXfVmctdxaCXlFQ8V5JM77/HT46weyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGh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" alt="plot of chunk unnamed-chunk-4"/> </p>
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-4"/> </p>
 
 <pre><code class="r">max(listacc)
 </code></pre>

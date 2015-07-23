@@ -5,7 +5,21 @@ date: "Monday, July 20, 2015"
 output: html_document
 ---
 
-# Titanic Case
+# Titanic: Machine Learning from Disaster
+
+Source: https://www.kaggle.com/c/titanic
+
+Predict survival on the Titanic (using Excel, Python, R, and Random Forests)
+
+See best practice code and explore visualizations of the Titanic dataset on Kaggle Scripts. Submit directly to the competition, no data download or local environment needed!
+
+The sinking of the RMS Titanic is one of the most infamous shipwrecks in history.  On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.
+
+One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.
+
+In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply the tools of machine learning to predict which passengers survived the tragedy.
+
+We start loading the data set.
 
 
 ```r
@@ -18,13 +32,119 @@ Loading Libraries
 
 ```r
 library(rpart)
+```
+
+```
+## Warning: package 'rpart' was built under R version 3.1.3
+```
+
+```r
 library(rpart.plot)
+```
+
+```
+## Warning: package 'rpart.plot' was built under R version 3.1.3
+```
+
+```r
 library(caTools)
+```
+
+```
+## Warning: package 'caTools' was built under R version 3.1.3
+```
+
+```r
 library(ROCR)
+```
+
+```
+## Warning: package 'ROCR' was built under R version 3.1.3
+```
+
+```
+## Loading required package: gplots
+```
+
+```
+## Warning: package 'gplots' was built under R version 3.1.3
+```
+
+```
+## 
+## Attaching package: 'gplots'
+## 
+## The following object is masked from 'package:stats':
+## 
+##     lowess
+```
+
+```r
 library(caret)
+```
+
+```
+## Warning: package 'caret' was built under R version 3.1.3
+```
+
+```
+## Loading required package: lattice
+## Loading required package: ggplot2
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.1.3
+```
+
+```
+## 
+## Attaching package: 'ggplot2'
+## 
+## The following object is masked _by_ '.GlobalEnv':
+## 
+##     msleep
+```
+
+```r
 library(e1071)
+```
+
+```
+## Warning: package 'e1071' was built under R version 3.1.3
+```
+
+```r
 library(randomForest)
+```
+
+```
+## Warning: package 'randomForest' was built under R version 3.1.3
+```
+
+```
+## randomForest 4.6-10
+## Type rfNews() to see new features/changes/bug fixes.
+```
+
+```r
 library(flexclust)
+```
+
+```
+## Warning: package 'flexclust' was built under R version 3.1.3
+```
+
+```
+## Loading required package: grid
+## Loading required package: modeltools
+```
+
+```
+## Warning: package 'modeltools' was built under R version 3.1.3
+```
+
+```
+## Loading required package: stats4
 ```
 
 Formating the Data
@@ -60,7 +180,7 @@ acc
 ```
 
 ```
-## [1] 0.7574627
+## [1] 0.7798507
 ```
 
 ```r
@@ -70,8 +190,8 @@ tabla
 ```
 ##    PredictRF
 ##       0   1
-##   0 142  23
-##   1  42  61
+##   0 145  20
+##   1  39  64
 ```
 
 ```r
