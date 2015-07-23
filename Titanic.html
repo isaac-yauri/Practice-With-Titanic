@@ -215,114 +215,58 @@ hr {
 
 <p>In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply the tools of machine learning to predict which passengers survived the tragedy.</p>
 
-<p>We start loading the data set.</p>
+<p>We start loading the data sets from Kaggle.</p>
 
-<pre><code class="r">train &lt;- read.csv(&quot;train.csv&quot;)
-test &lt;- read.csv(&quot;test.csv&quot;)
+<pre><code class="r">train &lt;- read.csv(&quot;http://www.kaggle.com/c/titanic/download/train.csv&quot;)
+test &lt;- read.csv(&quot;http://www.kaggle.com/c/titanic/download/test.csv&quot;)
 </code></pre>
 
 <p>Loading Libraries</p>
 
 <pre><code class="r">library(rpart)
-</code></pre>
-
-<pre><code>## Warning: package &#39;rpart&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code class="r">library(rpart.plot)
-</code></pre>
-
-<pre><code>## Warning: package &#39;rpart.plot&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code class="r">library(caTools)
-</code></pre>
-
-<pre><code>## Warning: package &#39;caTools&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code class="r">library(ROCR)
-</code></pre>
-
-<pre><code>## Warning: package &#39;ROCR&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code>## Loading required package: gplots
-</code></pre>
-
-<pre><code>## Warning: package &#39;gplots&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code>## 
-## Attaching package: &#39;gplots&#39;
-## 
-## The following object is masked from &#39;package:stats&#39;:
-## 
-##     lowess
-</code></pre>
-
-<pre><code class="r">library(caret)
-</code></pre>
-
-<pre><code>## Warning: package &#39;caret&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code>## Loading required package: lattice
-## Loading required package: ggplot2
-</code></pre>
-
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code>## 
-## Attaching package: &#39;ggplot2&#39;
-## 
-## The following object is masked _by_ &#39;.GlobalEnv&#39;:
-## 
-##     msleep
-</code></pre>
-
-<pre><code class="r">library(e1071)
-</code></pre>
-
-<pre><code>## Warning: package &#39;e1071&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code class="r">library(randomForest)
-</code></pre>
-
-<pre><code>## Warning: package &#39;randomForest&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code>## randomForest 4.6-10
-## Type rfNews() to see new features/changes/bug fixes.
-</code></pre>
-
-<pre><code class="r">library(flexclust)
-</code></pre>
-
-<pre><code>## Warning: package &#39;flexclust&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code>## Loading required package: grid
-## Loading required package: modeltools
-</code></pre>
-
-<pre><code>## Warning: package &#39;modeltools&#39; was built under R version 3.1.3
-</code></pre>
-
-<pre><code>## Loading required package: stats4
+library(rpart.plot)
+library(caTools)
+library(ROCR)
+library(caret)
+library(e1071)
+library(randomForest)
+library(flexclust)
 </code></pre>
 
 <p>Formating the Data</p>
 
 <pre><code class="r">train$Survived &lt;- as.factor(train$Survived)
-train$Pclass &lt;- as.factor(train$Pclass)
-train$Embarked &lt;- as.character(train$Embarked)
-#train$Title &lt;- as.factor(train$Title)
+</code></pre>
+
+<pre><code>## Error in `$&lt;-.data.frame`(`*tmp*`, &quot;Survived&quot;, value = structure(integer(0), .Label = character(0), class = &quot;factor&quot;)): replacement has 0 rows, data has 299
+</code></pre>
+
+<pre><code class="r">train$Pclass &lt;- as.factor(train$Pclass)
+</code></pre>
+
+<pre><code>## Error in `$&lt;-.data.frame`(`*tmp*`, &quot;Pclass&quot;, value = structure(integer(0), .Label = character(0), class = &quot;factor&quot;)): replacement has 0 rows, data has 299
+</code></pre>
+
+<pre><code class="r">train$Embarked &lt;- as.character(train$Embarked)
+</code></pre>
+
+<pre><code>## Error in `$&lt;-.data.frame`(`*tmp*`, &quot;Embarked&quot;, value = character(0)): replacement has 0 rows, data has 299
+</code></pre>
+
+<pre><code class="r">#train$Title &lt;- as.factor(train$Title)
 test$Pclass &lt;- as.factor(test$Pclass)
-test$Embarked &lt;- as.character(test$Embarked)
-#test$Title &lt;- as.factor(test$Title)
+</code></pre>
+
+<pre><code>## Error in `$&lt;-.data.frame`(`*tmp*`, &quot;Pclass&quot;, value = structure(integer(0), .Label = character(0), class = &quot;factor&quot;)): replacement has 0 rows, data has 299
+</code></pre>
+
+<pre><code class="r">test$Embarked &lt;- as.character(test$Embarked)
+</code></pre>
+
+<pre><code>## Error in `$&lt;-.data.frame`(`*tmp*`, &quot;Embarked&quot;, value = character(0)): replacement has 0 rows, data has 299
+</code></pre>
+
+<pre><code class="r">#test$Title &lt;- as.factor(test$Title)
 </code></pre>
 
 <pre><code class="r">listacc &lt;- NULL
@@ -339,7 +283,12 @@ acc &lt;- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
 listacc[i] &lt;- acc
 if (i %% 100 == 0) { cat(i)}
 }
-acc
+</code></pre>
+
+<pre><code>## Error in sample.split(train$Survived, SplitRatio = 0.7): Error in sample.split: &#39;SplitRatio&#39; parameter has to be i [0, 1] range or [1, length(Y)] range
+</code></pre>
+
+<pre><code class="r">acc
 </code></pre>
 
 <pre><code>## [1] 0.7798507
@@ -357,37 +306,67 @@ acc
 <pre><code class="r">plot(listacc)
 </code></pre>
 
-<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-4"/> </p>
+<pre><code>## Warning in min(x): no non-missing arguments to min; returning Inf
+</code></pre>
+
+<pre><code>## Warning in max(x): no non-missing arguments to max; returning -Inf
+</code></pre>
+
+<pre><code>## Warning in min(x): no non-missing arguments to min; returning Inf
+</code></pre>
+
+<pre><code>## Warning in max(x): no non-missing arguments to max; returning -Inf
+</code></pre>
+
+<pre><code>## Error in plot.window(...): se necesitan valores finitos de &#39;xlim&#39;
+</code></pre>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAAABlBMVEX9/v39/v17TDFfAAAAAnRSTlP/AOW3MEoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAASISURBVHic7dExDQAACMAw8G8aGRxrFSzZLEnzHcAP46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzI+yvgo46OMjzqVy+BudrHIxgAAAABJRU5ErkJggg==" alt="plot of chunk unnamed-chunk-4"/> </p>
 
 <pre><code class="r">max(listacc)
 </code></pre>
 
-<pre><code>## [1] NA
+<pre><code>## Warning in max(listacc): no non-missing arguments to max; returning -Inf
+</code></pre>
+
+<pre><code>## [1] -Inf
 </code></pre>
 
 <pre><code class="r">which.max(listacc)
 </code></pre>
 
-<pre><code>## [1] 202
+<pre><code>## integer(0)
 </code></pre>
 
 <pre><code class="r">PredTest &lt;- predict(TitanicRF, newdata=test, type=&quot;response&quot;)
-MySubmission &lt;- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
-write.csv(MySubmission, &quot;Submission.csv&quot;, row.names=FALSE)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;Pclass&#39; not found
+</code></pre>
+
+<pre><code class="r">MySubmission &lt;- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
+</code></pre>
+
+<pre><code>## Error in data.frame(PassengerID = test$PassengerId, Survived = PredTest): arguments imply differing number of rows: 0, 418
+</code></pre>
+
+<pre><code class="r">write.csv(MySubmission, &quot;Submission.csv&quot;, row.names=FALSE)
 
 
 
 table(train$Survived, train$Sex)
 </code></pre>
 
-<pre><code>##    
-##     female male
-##   0     81  468
-##   1    233  109
+<pre><code>## &lt; table of extent 0 x 0 &gt;
 </code></pre>
 
 <pre><code class="r">female &lt;- subset(train, Sex == &quot;female&quot;)
-table(female$Survived, female$Parch)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;Sex&#39; not found
+</code></pre>
+
+<pre><code class="r">table(female$Survived, female$Parch)
 </code></pre>
 
 <pre><code>##    
@@ -399,33 +378,14 @@ table(female$Survived, female$Parch)
 <pre><code class="r">str(train)
 </code></pre>
 
-<pre><code>## &#39;data.frame&#39;:    891 obs. of  12 variables:
-##  $ PassengerId: int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ Survived   : Factor w/ 2 levels &quot;0&quot;,&quot;1&quot;: 1 2 2 2 1 1 1 1 2 2 ...
-##  $ Pclass     : Factor w/ 3 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;: 3 1 3 1 3 3 1 3 3 2 ...
-##  $ Name       : Factor w/ 891 levels &quot;Abbing, Mr. Anthony&quot;,..: 109 191 358 277 16 559 520 629 417 581 ...
-##  $ Sex        : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 1 1 1 2 2 2 2 1 1 ...
-##  $ Age        : num  22 38 26 35 35 NA 54 2 27 14 ...
-##  $ SibSp      : int  1 1 0 1 0 0 0 3 0 1 ...
-##  $ Parch      : int  0 0 0 0 0 0 0 1 2 0 ...
-##  $ Ticket     : Factor w/ 681 levels &quot;110152&quot;,&quot;110413&quot;,..: 524 597 670 50 473 276 86 396 345 133 ...
-##  $ Fare       : num  7.25 71.28 7.92 53.1 8.05 ...
-##  $ Cabin      : Factor w/ 148 levels &quot;&quot;,&quot;A10&quot;,&quot;A14&quot;,..: 1 83 1 57 1 1 131 1 1 1 ...
-##  $ Embarked   : chr  &quot;S&quot; &quot;C&quot; &quot;S&quot; &quot;S&quot; ...
+<pre><code>## &#39;data.frame&#39;:    299 obs. of  1 variable:
+##  $ X..DOCTYPE.html.: Factor w/ 240 levels &quot;&#39;10px&#39;);&quot;,&quot; &quot;,..: 204 201 202 203 200 230 172 238 236 239 ...
 </code></pre>
 
 <pre><code class="r">table(train$Parch, train$Survived)
 </code></pre>
 
-<pre><code>##    
-##       0   1
-##   0 445 233
-##   1  53  65
-##   2  40  40
-##   3   2   3
-##   4   4   0
-##   5   4   1
-##   6   1   0
+<pre><code>## &lt; table of extent 0 x 0 &gt;
 </code></pre>
 
 <pre><code class="r">summary(TitanicRF)
@@ -456,26 +416,14 @@ table(female$Survived, female$Parch)
 <pre><code class="r">table(train$Age)
 </code></pre>
 
-<pre><code>## 
-## 0.42 0.67 0.75 0.83 0.92    1    2    3    4    5    6    7    8    9   10 
-##    1    1    2    2    1    7   10    6   10    4    3    3    4    8    2 
-##   11   12   13   14 14.5   15   16   17   18   19   20 20.5   21   22   23 
-##    4    1    2    6    1    5   17   13   26   25   15    1   24   27   15 
-## 23.5   24 24.5   25   26   27   28 28.5   29   30 30.5   31   32 32.5   33 
-##    1   30    1   23   18   18   25    2   20   25    2   17   18    2   15 
-##   34 34.5   35   36 36.5   37   38   39   40 40.5   41   42   43   44   45 
-##   15    1   18   22    1    6   11   14   13    2    6   13    5    9   12 
-## 45.5   46   47   48   49   50   51   52   53   54   55 55.5   56   57   58 
-##    2    3    9    9    6   10    7    6    1    8    2    1    4    2    5 
-##   59   60   61   62   63   64   65   66   70 70.5   71   74   80 
-##    2    4    3    4    2    2    3    1    2    1    2    1    1
+<pre><code>## &lt; table of extent 0 &gt;
 </code></pre>
 
 <pre><code class="r">summary(train$Age)
 </code></pre>
 
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##    0.42   20.12   28.00   29.70   38.00   80.00     177
+<pre><code>## Length  Class   Mode 
+##      0   NULL   NULL
 </code></pre>
 
 <pre><code class="r">train$Title &lt;- NA
@@ -506,299 +454,348 @@ test$Title[grep(&quot;Col.&quot;, test$Name)] &lt;- &quot;Col.&quot;
 table(train$Title, train$Survived)
 </code></pre>
 
-<pre><code>##           
-##              0   1
-##   Col.       7   3
-##   Don.       2   0
-##   Dr.        5   6
-##   Jonkheer   1   0
-##   Major.     1   1
-##   Master.   17  23
-##   Miss.     54 124
-##   Mr.      428  81
-##   Mrs.      27 100
-##   Rev.       6   0
+<pre><code>## Error in table(train$Title, train$Survived): all arguments must have the same length
 </code></pre>
 
 <pre><code class="r">table(test$Title)
 </code></pre>
 
-<pre><code>## 
-##    Col.    Don.     Dr. Master.   Miss.     Mr.    Mrs.    Rev. 
-##       5       3       6      20      77     236      69       2
+<pre><code>## &lt; table of extent 0 &gt;
 </code></pre>
 
 <pre><code class="r">table(train$Age, train$Title)
 </code></pre>
 
-<pre><code>##       
-##        Col. Don. Dr. Jonkheer Major. Master. Miss. Mr. Mrs. Rev.
-##   0.42    0    0   0        0      0       1     0   0    0    0
-##   0.67    0    0   0        0      0       1     0   0    0    0
-##   0.75    0    0   0        0      0       0     2   0    0    0
-##   0.83    0    0   0        0      0       2     0   0    0    0
-##   0.92    0    0   0        0      0       1     0   0    0    0
-##   1       0    0   0        0      0       5     2   0    0    0
-##   2       0    0   0        0      0       4     6   0    0    0
-##   3       0    0   0        0      0       4     2   0    0    0
-##   4       0    0   0        0      0       5     5   0    0    0
-##   5       0    0   0        0      0       0     4   0    0    0
-##   6       0    0   0        0      0       1     2   0    0    0
-##   7       0    0   0        0      0       2     1   0    0    0
-##   8       1    0   0        0      0       2     1   0    0    0
-##   9       0    0   0        0      0       4     4   0    0    0
-##   10      0    0   0        0      0       1     1   0    0    0
-##   11      0    0   0        0      0       2     1   1    0    0
-##   12      0    0   0        0      0       1     0   0    0    0
-##   13      0    0   0        0      0       0     2   0    0    0
-##   14      0    0   0        0      0       0     3   2    1    0
-##   14.5    0    0   0        0      0       0     1   0    0    0
-##   15      0    0   0        0      0       0     3   1    1    0
-##   16      0    0   0        0      0       0     6  11    0    0
-##   17      0    0   0        0      0       0     4   7    2    0
-##   18      0    0   0        0      0       0    10  13    3    0
-##   19      0    0   0        0      0       0     4  18    3    0
-##   20      0    0   0        0      0       0     2  13    0    0
-##   20.5    0    0   0        0      0       0     0   1    0    0
-##   21      0    0   0        0      0       0     7  17    0    0
-##   22      0    0   0        0      0       0     9  15    3    0
-##   23      0    0   1        0      0       0     4   9    1    0
-##   23.5    0    0   0        0      0       0     0   1    0    0
-##   24      1    0   0        0      0       0     5  13    9    0
-##   24.5    0    0   0        0      0       0     0   1    0    0
-##   25      0    0   0        0      0       0     3  18    2    0
-##   26      0    0   0        0      0       0     3  13    2    0
-##   27      0    0   0        0      0       0     3  11    3    1
-##   28      1    0   0        0      0       0     2  16    4    1
-##   28.5    0    0   0        0      0       0     0   2    0    0
-##   29      1    0   0        0      0       0     1  12    6    0
-##   30      0    0   0        0      0       0     9  14    2    0
-##   30.5    0    0   0        0      0       0     1   1    0    0
-##   31      2    0   0        0      0       0     3   9    3    0
-##   32      0    0   1        0      0       0     1  14    2    0
-##   32.5    0    0   0        0      0       0     1   1    0    0
-##   33      0    0   1        0      0       0     1   8    4    0
-##   34      0    0   1        0      0       0     1  11    2    0
-##   34.5    0    0   0        0      0       0     0   1    0    0
-##   35      0    0   0        0      0       0     3  10    5    0
-##   36      1    0   1        0      0       0     3  13    4    0
-##   36.5    0    0   0        0      0       0     0   1    0    0
-##   37      0    0   0        0      0       0     1   5    0    0
-##   38      0    0   0        1      0       0     3   5    2    0
-##   39      0    0   0        0      0       0     1   8    5    0
-##   40      0    1   0        0      0       0     2   6    4    0
-##   40.5    0    0   0        0      0       0     0   2    0    0
-##   41      0    0   0        0      0       0     1   2    3    0
-##   42      0    0   0        0      0       0     1   9    2    1
-##   43      0    0   0        0      0       0     0   3    2    0
-##   44      0    0   1        0      0       0     0   5    3    0
-##   45      0    0   0        0      1       0     1   5    5    0
-##   45.5    0    0   0        0      0       0     0   2    0    0
-##   46      0    0   0        0      0       0     0   3    0    0
-##   47      1    0   0        0      0       0     0   6    2    0
-##   48      0    0   0        0      0       0     0   5    4    0
-##   49      0    0   1        0      0       0     0   4    1    0
-##   50      0    1   1        0      0       0     3   3    2    0
-##   51      0    0   0        0      0       0     0   5    1    1
-##   52      0    0   0        0      1       0     0   3    2    0
-##   53      0    0   0        0      0       0     0   0    1    0
-##   54      0    0   1        0      0       0     1   3    2    1
-##   55      0    0   0        0      0       0     0   1    1    0
-##   55.5    0    0   0        0      0       0     0   1    0    0
-##   56      1    0   0        0      0       0     0   2    1    0
-##   57      0    0   0        0      0       0     0   0    1    1
-##   58      0    0   0        0      0       0     2   2    1    0
-##   59      0    0   0        0      0       0     0   2    0    0
-##   60      1    0   0        0      0       0     0   2    1    0
-##   61      0    0   0        0      0       0     0   3    0    0
-##   62      0    0   0        0      0       0     0   3    1    0
-##   63      0    0   0        0      0       0     1   0    1    0
-##   64      0    0   0        0      0       0     0   2    0    0
-##   65      0    0   0        0      0       0     0   3    0    0
-##   66      0    0   0        0      0       0     0   1    0    0
-##   70      0    0   0        0      0       0     0   1    0    0
-##   70.5    0    0   0        0      0       0     0   1    0    0
-##   71      0    0   0        0      0       0     0   2    0    0
-##   74      0    0   0        0      0       0     0   1    0    0
-##   80      0    0   0        0      0       0     0   1    0    0
+<pre><code>## Error in table(train$Age, train$Title): all arguments must have the same length
 </code></pre>
 
 <pre><code class="r">summary(test$Age)      
 </code></pre>
 
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##    0.17   21.00   27.00   30.27   39.00   76.00      86
+<pre><code>## Length  Class   Mode 
+##      0   NULL   NULL
 </code></pre>
 
 <pre><code class="r">table(train$Title == &quot;Major.&quot;)
 </code></pre>
 
-<pre><code>## 
-## FALSE  TRUE 
-##   884     2
+<pre><code>## &lt; table of extent 0 &gt;
 </code></pre>
 
 <pre><code class="r">train[train$Title == &quot;Master.&quot;,]
 </code></pre>
 
-<pre><code>##      PassengerId Survived Pclass
-## 8              8        0      3
-## 17            17        0      3
-## 51            51        0      3
-## 60            60        0      3
-## 64            64        0      3
-## 66            66        1      3
-## 79            79        1      2
-## 126          126        1      3
-## 160          160        0      3
-## 165          165        0      3
-## 166          166        1      3
-## 172          172        0      3
-## 177          177        0      3
-## 183          183        0      3
-## 184          184        1      2
-## 194          194        1      2
-## 262          262        1      3
-## 279          279        0      3
-## 306          306        1      1
-## 341          341        1      2
-## 349          349        1      3
-## NA            NA     &lt;NA&gt;   &lt;NA&gt;
-## 387          387        0      3
-## 408          408        1      2
-## NA.1          NA     &lt;NA&gt;   &lt;NA&gt;
-## 446          446        1      1
-## 481          481        0      3
-## 490          490        1      3
-## 550          550        1      2
-## NA.2          NA     &lt;NA&gt;   &lt;NA&gt;
-## 710          710        1      3
-## NA.3          NA     &lt;NA&gt;   &lt;NA&gt;
-## 752          752        1      3
-## 756          756        1      2
-## NA.4          NA     &lt;NA&gt;   &lt;NA&gt;
-## 788          788        0      3
-## 789          789        1      3
-## 803          803        1      1
-## 804          804        1      3
-## 820          820        0      3
-## 825          825        0      3
-## 828          828        1      2
-## 832          832        1      2
-## 851          851        0      3
-## 870          870        1      3
-##                                                   Name  Sex   Age SibSp
-## 8                       Palsson, Master. Gosta Leonard male  2.00     3
-## 17                                Rice, Master. Eugene male  2.00     4
-## 51                          Panula, Master. Juha Niilo male  7.00     4
-## 60                  Goodwin, Master. William Frederick male 11.00     5
-## 64                               Skoog, Master. Harald male  4.00     3
-## 66                            Moubarek, Master. Gerios male    NA     1
-## 79                       Caldwell, Master. Alden Gates male  0.83     0
-## 126                       Nicola-Yarred, Master. Elias male 12.00     1
-## 160                         Sage, Master. Thomas Henry male    NA     8
-## 165                       Panula, Master. Eino Viljami male  1.00     4
-## 166    Goldsmith, Master. Frank John William &quot;Frankie&quot; male  9.00     0
-## 172                               Rice, Master. Arthur male  4.00     4
-## 177                      Lefebre, Master. Henry Forbes male    NA     3
-## 183              Asplund, Master. Clarence Gustaf Hugo male  9.00     4
-## 184                          Becker, Master. Richard F male  1.00     2
-## 194                         Navratil, Master. Michel M male  3.00     1
-## 262                  Asplund, Master. Edvin Rojj Felix male  3.00     4
-## 279                                 Rice, Master. Eric male  7.00     4
-## 306                     Allison, Master. Hudson Trevor male  0.92     1
-## 341                     Navratil, Master. Edmond Roger male  2.00     1
-## 349             Coutts, Master. William Loch &quot;William&quot; male  3.00     1
-## NA                                                &lt;NA&gt; &lt;NA&gt;    NA    NA
-## 387                    Goodwin, Master. Sidney Leonard male  1.00     5
-## 408                     Richards, Master. William Rowe male  3.00     1
-## NA.1                                              &lt;NA&gt; &lt;NA&gt;    NA    NA
-## 446                          Dodge, Master. Washington male  4.00     0
-## 481                     Goodwin, Master. Harold Victor male  9.00     5
-## 490              Coutts, Master. Eden Leslie &quot;Neville&quot; male  9.00     1
-## 550                     Davies, Master. John Morgan Jr male  8.00     1
-## NA.2                                              &lt;NA&gt; &lt;NA&gt;    NA    NA
-## 710  Moubarek, Master. Halim Gonios (&quot;William George&quot;) male    NA     1
-## NA.3                                              &lt;NA&gt; &lt;NA&gt;    NA    NA
-## 752                                Moor, Master. Meier male  6.00     0
-## 756                          Hamalainen, Master. Viljo male  0.67     1
-## NA.4                                              &lt;NA&gt; &lt;NA&gt;    NA    NA
-## 788                          Rice, Master. George Hugh male  8.00     4
-## 789                         Dean, Master. Bertram Vere male  1.00     1
-## 803                Carter, Master. William Thornton II male 11.00     1
-## 804                    Thomas, Master. Assad Alexander male  0.42     0
-## 820                       Skoog, Master. Karl Thorsten male 10.00     3
-## 825                       Panula, Master. Urho Abraham male  2.00     4
-## 828                              Mallet, Master. Andre male  1.00     0
-## 832                    Richards, Master. George Sibley male  0.83     1
-## 851            Andersson, Master. Sigvard Harald Elias male  4.00     4
-## 870                    Johnson, Master. Harold Theodor male  4.00     1
-##      Parch          Ticket     Fare   Cabin Embarked   Title
-## 8        1          349909  21.0750                S Master.
-## 17       1          382652  29.1250                Q Master.
-## 51       1         3101295  39.6875                S Master.
-## 60       2         CA 2144  46.9000                S Master.
-## 64       2          347088  27.9000                S Master.
-## 66       1            2661  15.2458                C Master.
-## 79       2          248738  29.0000                S Master.
-## 126      0            2651  11.2417                C Master.
-## 160      2        CA. 2343  69.5500                S Master.
-## 165      1         3101295  39.6875                S Master.
-## 166      2          363291  20.5250                S Master.
-## 172      1          382652  29.1250                Q Master.
-## 177      1            4133  25.4667                S Master.
-## 183      2          347077  31.3875                S Master.
-## 184      1          230136  39.0000      F4        S Master.
-## 194      1          230080  26.0000      F2        S Master.
-## 262      2          347077  31.3875                S Master.
-## 279      1          382652  29.1250                Q Master.
-## 306      2          113781 151.5500 C22 C26        S Master.
-## 341      1          230080  26.0000      F2        S Master.
-## 349      1      C.A. 37671  15.9000                S Master.
-## NA      NA            &lt;NA&gt;       NA    &lt;NA&gt;     &lt;NA&gt;    &lt;NA&gt;
-## 387      2         CA 2144  46.9000                S Master.
-## 408      1           29106  18.7500                S Master.
-## NA.1    NA            &lt;NA&gt;       NA    &lt;NA&gt;     &lt;NA&gt;    &lt;NA&gt;
-## 446      2           33638  81.8583     A34        S Master.
-## 481      2         CA 2144  46.9000                S Master.
-## 490      1      C.A. 37671  15.9000                S Master.
-## 550      1      C.A. 33112  36.7500                S Master.
-## NA.2    NA            &lt;NA&gt;       NA    &lt;NA&gt;     &lt;NA&gt;    &lt;NA&gt;
-## 710      1            2661  15.2458                C Master.
-## NA.3    NA            &lt;NA&gt;       NA    &lt;NA&gt;     &lt;NA&gt;    &lt;NA&gt;
-## 752      1          392096  12.4750    E121        S Master.
-## 756      1          250649  14.5000                S Master.
-## NA.4    NA            &lt;NA&gt;       NA    &lt;NA&gt;     &lt;NA&gt;    &lt;NA&gt;
-## 788      1          382652  29.1250                Q Master.
-## 789      2       C.A. 2315  20.5750                S Master.
-## 803      2          113760 120.0000 B96 B98        S Master.
-## 804      1            2625   8.5167                C Master.
-## 820      2          347088  27.9000                S Master.
-## 825      1         3101295  39.6875                S Master.
-## 828      2 S.C./PARIS 2079  37.0042                C Master.
-## 832      1           29106  18.7500                S Master.
-## 851      2          347082  31.2750                S Master.
-## 870      1          347742  11.1333                S Master.
+<pre><code>##        X..DOCTYPE.html. Title
+## NA                 &lt;NA&gt;  &lt;NA&gt;
+## NA.1               &lt;NA&gt;  &lt;NA&gt;
+## NA.2               &lt;NA&gt;  &lt;NA&gt;
+## NA.3               &lt;NA&gt;  &lt;NA&gt;
+## NA.4               &lt;NA&gt;  &lt;NA&gt;
+## NA.5               &lt;NA&gt;  &lt;NA&gt;
+## NA.6               &lt;NA&gt;  &lt;NA&gt;
+## NA.7               &lt;NA&gt;  &lt;NA&gt;
+## NA.8               &lt;NA&gt;  &lt;NA&gt;
+## NA.9               &lt;NA&gt;  &lt;NA&gt;
+## NA.10              &lt;NA&gt;  &lt;NA&gt;
+## NA.11              &lt;NA&gt;  &lt;NA&gt;
+## NA.12              &lt;NA&gt;  &lt;NA&gt;
+## NA.13              &lt;NA&gt;  &lt;NA&gt;
+## NA.14              &lt;NA&gt;  &lt;NA&gt;
+## NA.15              &lt;NA&gt;  &lt;NA&gt;
+## NA.16              &lt;NA&gt;  &lt;NA&gt;
+## NA.17              &lt;NA&gt;  &lt;NA&gt;
+## NA.18              &lt;NA&gt;  &lt;NA&gt;
+## NA.19              &lt;NA&gt;  &lt;NA&gt;
+## NA.20              &lt;NA&gt;  &lt;NA&gt;
+## NA.21              &lt;NA&gt;  &lt;NA&gt;
+## NA.22              &lt;NA&gt;  &lt;NA&gt;
+## NA.23              &lt;NA&gt;  &lt;NA&gt;
+## NA.24              &lt;NA&gt;  &lt;NA&gt;
+## NA.25              &lt;NA&gt;  &lt;NA&gt;
+## NA.26              &lt;NA&gt;  &lt;NA&gt;
+## NA.27              &lt;NA&gt;  &lt;NA&gt;
+## NA.28              &lt;NA&gt;  &lt;NA&gt;
+## NA.29              &lt;NA&gt;  &lt;NA&gt;
+## NA.30              &lt;NA&gt;  &lt;NA&gt;
+## NA.31              &lt;NA&gt;  &lt;NA&gt;
+## NA.32              &lt;NA&gt;  &lt;NA&gt;
+## NA.33              &lt;NA&gt;  &lt;NA&gt;
+## NA.34              &lt;NA&gt;  &lt;NA&gt;
+## NA.35              &lt;NA&gt;  &lt;NA&gt;
+## NA.36              &lt;NA&gt;  &lt;NA&gt;
+## NA.37              &lt;NA&gt;  &lt;NA&gt;
+## NA.38              &lt;NA&gt;  &lt;NA&gt;
+## NA.39              &lt;NA&gt;  &lt;NA&gt;
+## NA.40              &lt;NA&gt;  &lt;NA&gt;
+## NA.41              &lt;NA&gt;  &lt;NA&gt;
+## NA.42              &lt;NA&gt;  &lt;NA&gt;
+## NA.43              &lt;NA&gt;  &lt;NA&gt;
+## NA.44              &lt;NA&gt;  &lt;NA&gt;
+## NA.45              &lt;NA&gt;  &lt;NA&gt;
+## NA.46              &lt;NA&gt;  &lt;NA&gt;
+## NA.47              &lt;NA&gt;  &lt;NA&gt;
+## NA.48              &lt;NA&gt;  &lt;NA&gt;
+## NA.49              &lt;NA&gt;  &lt;NA&gt;
+## NA.50              &lt;NA&gt;  &lt;NA&gt;
+## NA.51              &lt;NA&gt;  &lt;NA&gt;
+## NA.52              &lt;NA&gt;  &lt;NA&gt;
+## NA.53              &lt;NA&gt;  &lt;NA&gt;
+## NA.54              &lt;NA&gt;  &lt;NA&gt;
+## NA.55              &lt;NA&gt;  &lt;NA&gt;
+## NA.56              &lt;NA&gt;  &lt;NA&gt;
+## NA.57              &lt;NA&gt;  &lt;NA&gt;
+## NA.58              &lt;NA&gt;  &lt;NA&gt;
+## NA.59              &lt;NA&gt;  &lt;NA&gt;
+## NA.60              &lt;NA&gt;  &lt;NA&gt;
+## NA.61              &lt;NA&gt;  &lt;NA&gt;
+## NA.62              &lt;NA&gt;  &lt;NA&gt;
+## NA.63              &lt;NA&gt;  &lt;NA&gt;
+## NA.64              &lt;NA&gt;  &lt;NA&gt;
+## NA.65              &lt;NA&gt;  &lt;NA&gt;
+## NA.66              &lt;NA&gt;  &lt;NA&gt;
+## NA.67              &lt;NA&gt;  &lt;NA&gt;
+## NA.68              &lt;NA&gt;  &lt;NA&gt;
+## NA.69              &lt;NA&gt;  &lt;NA&gt;
+## NA.70              &lt;NA&gt;  &lt;NA&gt;
+## NA.71              &lt;NA&gt;  &lt;NA&gt;
+## NA.72              &lt;NA&gt;  &lt;NA&gt;
+## NA.73              &lt;NA&gt;  &lt;NA&gt;
+## NA.74              &lt;NA&gt;  &lt;NA&gt;
+## NA.75              &lt;NA&gt;  &lt;NA&gt;
+## NA.76              &lt;NA&gt;  &lt;NA&gt;
+## NA.77              &lt;NA&gt;  &lt;NA&gt;
+## NA.78              &lt;NA&gt;  &lt;NA&gt;
+## NA.79              &lt;NA&gt;  &lt;NA&gt;
+## NA.80              &lt;NA&gt;  &lt;NA&gt;
+## NA.81              &lt;NA&gt;  &lt;NA&gt;
+## NA.82              &lt;NA&gt;  &lt;NA&gt;
+## NA.83              &lt;NA&gt;  &lt;NA&gt;
+## NA.84              &lt;NA&gt;  &lt;NA&gt;
+## NA.85              &lt;NA&gt;  &lt;NA&gt;
+## NA.86              &lt;NA&gt;  &lt;NA&gt;
+## NA.87              &lt;NA&gt;  &lt;NA&gt;
+## NA.88              &lt;NA&gt;  &lt;NA&gt;
+## NA.89              &lt;NA&gt;  &lt;NA&gt;
+## NA.90              &lt;NA&gt;  &lt;NA&gt;
+## NA.91              &lt;NA&gt;  &lt;NA&gt;
+## NA.92              &lt;NA&gt;  &lt;NA&gt;
+## NA.93              &lt;NA&gt;  &lt;NA&gt;
+## NA.94              &lt;NA&gt;  &lt;NA&gt;
+## NA.95              &lt;NA&gt;  &lt;NA&gt;
+## NA.96              &lt;NA&gt;  &lt;NA&gt;
+## NA.97              &lt;NA&gt;  &lt;NA&gt;
+## NA.98              &lt;NA&gt;  &lt;NA&gt;
+## NA.99              &lt;NA&gt;  &lt;NA&gt;
+## NA.100             &lt;NA&gt;  &lt;NA&gt;
+## NA.101             &lt;NA&gt;  &lt;NA&gt;
+## NA.102             &lt;NA&gt;  &lt;NA&gt;
+## NA.103             &lt;NA&gt;  &lt;NA&gt;
+## NA.104             &lt;NA&gt;  &lt;NA&gt;
+## NA.105             &lt;NA&gt;  &lt;NA&gt;
+## NA.106             &lt;NA&gt;  &lt;NA&gt;
+## NA.107             &lt;NA&gt;  &lt;NA&gt;
+## NA.108             &lt;NA&gt;  &lt;NA&gt;
+## NA.109             &lt;NA&gt;  &lt;NA&gt;
+## NA.110             &lt;NA&gt;  &lt;NA&gt;
+## NA.111             &lt;NA&gt;  &lt;NA&gt;
+## NA.112             &lt;NA&gt;  &lt;NA&gt;
+## NA.113             &lt;NA&gt;  &lt;NA&gt;
+## NA.114             &lt;NA&gt;  &lt;NA&gt;
+## NA.115             &lt;NA&gt;  &lt;NA&gt;
+## NA.116             &lt;NA&gt;  &lt;NA&gt;
+## NA.117             &lt;NA&gt;  &lt;NA&gt;
+## NA.118             &lt;NA&gt;  &lt;NA&gt;
+## NA.119             &lt;NA&gt;  &lt;NA&gt;
+## NA.120             &lt;NA&gt;  &lt;NA&gt;
+## NA.121             &lt;NA&gt;  &lt;NA&gt;
+## NA.122             &lt;NA&gt;  &lt;NA&gt;
+## NA.123             &lt;NA&gt;  &lt;NA&gt;
+## NA.124             &lt;NA&gt;  &lt;NA&gt;
+## NA.125             &lt;NA&gt;  &lt;NA&gt;
+## NA.126             &lt;NA&gt;  &lt;NA&gt;
+## NA.127             &lt;NA&gt;  &lt;NA&gt;
+## NA.128             &lt;NA&gt;  &lt;NA&gt;
+## NA.129             &lt;NA&gt;  &lt;NA&gt;
+## NA.130             &lt;NA&gt;  &lt;NA&gt;
+## NA.131             &lt;NA&gt;  &lt;NA&gt;
+## NA.132             &lt;NA&gt;  &lt;NA&gt;
+## NA.133             &lt;NA&gt;  &lt;NA&gt;
+## NA.134             &lt;NA&gt;  &lt;NA&gt;
+## NA.135             &lt;NA&gt;  &lt;NA&gt;
+## NA.136             &lt;NA&gt;  &lt;NA&gt;
+## NA.137             &lt;NA&gt;  &lt;NA&gt;
+## NA.138             &lt;NA&gt;  &lt;NA&gt;
+## NA.139             &lt;NA&gt;  &lt;NA&gt;
+## NA.140             &lt;NA&gt;  &lt;NA&gt;
+## NA.141             &lt;NA&gt;  &lt;NA&gt;
+## NA.142             &lt;NA&gt;  &lt;NA&gt;
+## NA.143             &lt;NA&gt;  &lt;NA&gt;
+## NA.144             &lt;NA&gt;  &lt;NA&gt;
+## NA.145             &lt;NA&gt;  &lt;NA&gt;
+## NA.146             &lt;NA&gt;  &lt;NA&gt;
+## NA.147             &lt;NA&gt;  &lt;NA&gt;
+## NA.148             &lt;NA&gt;  &lt;NA&gt;
+## NA.149             &lt;NA&gt;  &lt;NA&gt;
+## NA.150             &lt;NA&gt;  &lt;NA&gt;
+## NA.151             &lt;NA&gt;  &lt;NA&gt;
+## NA.152             &lt;NA&gt;  &lt;NA&gt;
+## NA.153             &lt;NA&gt;  &lt;NA&gt;
+## NA.154             &lt;NA&gt;  &lt;NA&gt;
+## NA.155             &lt;NA&gt;  &lt;NA&gt;
+## NA.156             &lt;NA&gt;  &lt;NA&gt;
+## NA.157             &lt;NA&gt;  &lt;NA&gt;
+## NA.158             &lt;NA&gt;  &lt;NA&gt;
+## NA.159             &lt;NA&gt;  &lt;NA&gt;
+## NA.160             &lt;NA&gt;  &lt;NA&gt;
+## NA.161             &lt;NA&gt;  &lt;NA&gt;
+## NA.162             &lt;NA&gt;  &lt;NA&gt;
+## NA.163             &lt;NA&gt;  &lt;NA&gt;
+## NA.164             &lt;NA&gt;  &lt;NA&gt;
+## NA.165             &lt;NA&gt;  &lt;NA&gt;
+## NA.166             &lt;NA&gt;  &lt;NA&gt;
+## NA.167             &lt;NA&gt;  &lt;NA&gt;
+## NA.168             &lt;NA&gt;  &lt;NA&gt;
+## NA.169             &lt;NA&gt;  &lt;NA&gt;
+## NA.170             &lt;NA&gt;  &lt;NA&gt;
+## NA.171             &lt;NA&gt;  &lt;NA&gt;
+## NA.172             &lt;NA&gt;  &lt;NA&gt;
+## NA.173             &lt;NA&gt;  &lt;NA&gt;
+## NA.174             &lt;NA&gt;  &lt;NA&gt;
+## NA.175             &lt;NA&gt;  &lt;NA&gt;
+## NA.176             &lt;NA&gt;  &lt;NA&gt;
+## NA.177             &lt;NA&gt;  &lt;NA&gt;
+## NA.178             &lt;NA&gt;  &lt;NA&gt;
+## NA.179             &lt;NA&gt;  &lt;NA&gt;
+## NA.180             &lt;NA&gt;  &lt;NA&gt;
+## NA.181             &lt;NA&gt;  &lt;NA&gt;
+## NA.182             &lt;NA&gt;  &lt;NA&gt;
+## NA.183             &lt;NA&gt;  &lt;NA&gt;
+## NA.184             &lt;NA&gt;  &lt;NA&gt;
+## NA.185             &lt;NA&gt;  &lt;NA&gt;
+## NA.186             &lt;NA&gt;  &lt;NA&gt;
+## NA.187             &lt;NA&gt;  &lt;NA&gt;
+## NA.188             &lt;NA&gt;  &lt;NA&gt;
+## NA.189             &lt;NA&gt;  &lt;NA&gt;
+## NA.190             &lt;NA&gt;  &lt;NA&gt;
+## NA.191             &lt;NA&gt;  &lt;NA&gt;
+## NA.192             &lt;NA&gt;  &lt;NA&gt;
+## NA.193             &lt;NA&gt;  &lt;NA&gt;
+## NA.194             &lt;NA&gt;  &lt;NA&gt;
+## NA.195             &lt;NA&gt;  &lt;NA&gt;
+## NA.196             &lt;NA&gt;  &lt;NA&gt;
+## NA.197             &lt;NA&gt;  &lt;NA&gt;
+## NA.198             &lt;NA&gt;  &lt;NA&gt;
+## NA.199             &lt;NA&gt;  &lt;NA&gt;
+## NA.200             &lt;NA&gt;  &lt;NA&gt;
+## NA.201             &lt;NA&gt;  &lt;NA&gt;
+## NA.202             &lt;NA&gt;  &lt;NA&gt;
+## NA.203             &lt;NA&gt;  &lt;NA&gt;
+## NA.204             &lt;NA&gt;  &lt;NA&gt;
+## NA.205             &lt;NA&gt;  &lt;NA&gt;
+## NA.206             &lt;NA&gt;  &lt;NA&gt;
+## NA.207             &lt;NA&gt;  &lt;NA&gt;
+## NA.208             &lt;NA&gt;  &lt;NA&gt;
+## NA.209             &lt;NA&gt;  &lt;NA&gt;
+## NA.210             &lt;NA&gt;  &lt;NA&gt;
+## NA.211             &lt;NA&gt;  &lt;NA&gt;
+## NA.212             &lt;NA&gt;  &lt;NA&gt;
+## NA.213             &lt;NA&gt;  &lt;NA&gt;
+## NA.214             &lt;NA&gt;  &lt;NA&gt;
+## NA.215             &lt;NA&gt;  &lt;NA&gt;
+## NA.216             &lt;NA&gt;  &lt;NA&gt;
+## NA.217             &lt;NA&gt;  &lt;NA&gt;
+## NA.218             &lt;NA&gt;  &lt;NA&gt;
+## NA.219             &lt;NA&gt;  &lt;NA&gt;
+## NA.220             &lt;NA&gt;  &lt;NA&gt;
+## NA.221             &lt;NA&gt;  &lt;NA&gt;
+## NA.222             &lt;NA&gt;  &lt;NA&gt;
+## NA.223             &lt;NA&gt;  &lt;NA&gt;
+## NA.224             &lt;NA&gt;  &lt;NA&gt;
+## NA.225             &lt;NA&gt;  &lt;NA&gt;
+## NA.226             &lt;NA&gt;  &lt;NA&gt;
+## NA.227             &lt;NA&gt;  &lt;NA&gt;
+## NA.228             &lt;NA&gt;  &lt;NA&gt;
+## NA.229             &lt;NA&gt;  &lt;NA&gt;
+## NA.230             &lt;NA&gt;  &lt;NA&gt;
+## NA.231             &lt;NA&gt;  &lt;NA&gt;
+## NA.232             &lt;NA&gt;  &lt;NA&gt;
+## NA.233             &lt;NA&gt;  &lt;NA&gt;
+## NA.234             &lt;NA&gt;  &lt;NA&gt;
+## NA.235             &lt;NA&gt;  &lt;NA&gt;
+## NA.236             &lt;NA&gt;  &lt;NA&gt;
+## NA.237             &lt;NA&gt;  &lt;NA&gt;
+## NA.238             &lt;NA&gt;  &lt;NA&gt;
+## NA.239             &lt;NA&gt;  &lt;NA&gt;
+## NA.240             &lt;NA&gt;  &lt;NA&gt;
+## NA.241             &lt;NA&gt;  &lt;NA&gt;
+## NA.242             &lt;NA&gt;  &lt;NA&gt;
+## NA.243             &lt;NA&gt;  &lt;NA&gt;
+## NA.244             &lt;NA&gt;  &lt;NA&gt;
+## NA.245             &lt;NA&gt;  &lt;NA&gt;
+## NA.246             &lt;NA&gt;  &lt;NA&gt;
+## NA.247             &lt;NA&gt;  &lt;NA&gt;
+## NA.248             &lt;NA&gt;  &lt;NA&gt;
+## NA.249             &lt;NA&gt;  &lt;NA&gt;
+## NA.250             &lt;NA&gt;  &lt;NA&gt;
+## NA.251             &lt;NA&gt;  &lt;NA&gt;
+## NA.252             &lt;NA&gt;  &lt;NA&gt;
+## NA.253             &lt;NA&gt;  &lt;NA&gt;
+## NA.254             &lt;NA&gt;  &lt;NA&gt;
+## NA.255             &lt;NA&gt;  &lt;NA&gt;
+## NA.256             &lt;NA&gt;  &lt;NA&gt;
+## NA.257             &lt;NA&gt;  &lt;NA&gt;
+## NA.258             &lt;NA&gt;  &lt;NA&gt;
+## NA.259             &lt;NA&gt;  &lt;NA&gt;
+## NA.260             &lt;NA&gt;  &lt;NA&gt;
+## NA.261             &lt;NA&gt;  &lt;NA&gt;
+## NA.262             &lt;NA&gt;  &lt;NA&gt;
+## NA.263             &lt;NA&gt;  &lt;NA&gt;
+## NA.264             &lt;NA&gt;  &lt;NA&gt;
+## NA.265             &lt;NA&gt;  &lt;NA&gt;
+## NA.266             &lt;NA&gt;  &lt;NA&gt;
+## NA.267             &lt;NA&gt;  &lt;NA&gt;
+## NA.268             &lt;NA&gt;  &lt;NA&gt;
+## NA.269             &lt;NA&gt;  &lt;NA&gt;
+## NA.270             &lt;NA&gt;  &lt;NA&gt;
+## NA.271             &lt;NA&gt;  &lt;NA&gt;
+## NA.272             &lt;NA&gt;  &lt;NA&gt;
+## NA.273             &lt;NA&gt;  &lt;NA&gt;
+## NA.274             &lt;NA&gt;  &lt;NA&gt;
+## NA.275             &lt;NA&gt;  &lt;NA&gt;
+## NA.276             &lt;NA&gt;  &lt;NA&gt;
+## NA.277             &lt;NA&gt;  &lt;NA&gt;
+## NA.278             &lt;NA&gt;  &lt;NA&gt;
+## NA.279             &lt;NA&gt;  &lt;NA&gt;
+## NA.280             &lt;NA&gt;  &lt;NA&gt;
+## NA.281             &lt;NA&gt;  &lt;NA&gt;
+## NA.282             &lt;NA&gt;  &lt;NA&gt;
+## NA.283             &lt;NA&gt;  &lt;NA&gt;
+## NA.284             &lt;NA&gt;  &lt;NA&gt;
+## NA.285             &lt;NA&gt;  &lt;NA&gt;
+## NA.286             &lt;NA&gt;  &lt;NA&gt;
+## NA.287             &lt;NA&gt;  &lt;NA&gt;
+## NA.288             &lt;NA&gt;  &lt;NA&gt;
+## NA.289             &lt;NA&gt;  &lt;NA&gt;
+## NA.290             &lt;NA&gt;  &lt;NA&gt;
+## NA.291             &lt;NA&gt;  &lt;NA&gt;
+## NA.292             &lt;NA&gt;  &lt;NA&gt;
+## NA.293             &lt;NA&gt;  &lt;NA&gt;
+## NA.294             &lt;NA&gt;  &lt;NA&gt;
+## NA.295             &lt;NA&gt;  &lt;NA&gt;
+## NA.296             &lt;NA&gt;  &lt;NA&gt;
+## NA.297             &lt;NA&gt;  &lt;NA&gt;
+## NA.298             &lt;NA&gt;  &lt;NA&gt;
 </code></pre>
 
 <pre><code class="r">train[is.na(train$Age)  &amp; train$Title == &quot;Master.&quot;,] 
 </code></pre>
 
-<pre><code>##     PassengerId Survived Pclass
-## 66           66        1      3
-## 160         160        0      3
-## 177         177        0      3
-## 710         710        1      3
-##                                                  Name  Sex Age SibSp Parch
-## 66                           Moubarek, Master. Gerios male  NA     1     1
-## 160                        Sage, Master. Thomas Henry male  NA     8     2
-## 177                     Lefebre, Master. Henry Forbes male  NA     3     1
-## 710 Moubarek, Master. Halim Gonios (&quot;William George&quot;) male  NA     1     1
-##       Ticket    Fare Cabin Embarked   Title
-## 66      2661 15.2458              C Master.
-## 160 CA. 2343 69.5500              S Master.
-## 177     4133 25.4667              S Master.
-## 710     2661 15.2458              C Master.
+<pre><code>## Warning in is.na(train$Age): is.na() applied to non-(list or vector) of
+## type &#39;NULL&#39;
+</code></pre>
+
+<pre><code>## [1] X..DOCTYPE.html. Title           
+## &lt;0 rows&gt; (or 0-length row.names)
 </code></pre>
 
 </body>
