@@ -22,8 +22,8 @@ In this challenge, we ask you to complete the analysis of what sorts of people w
 We start loading the data sets from Kaggle.
 
 ```{r}
-train <- read.csv("http://www.kaggle.com/c/titanic/download/train.csv")
-test <- read.csv("http://www.kaggle.com/c/titanic/download/test.csv")
+train <- read.csv("train.csv")
+test <- read.csv("test.csv")
 ```
 
 Loading Libraries
