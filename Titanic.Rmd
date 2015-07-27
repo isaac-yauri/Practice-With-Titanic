@@ -54,17 +54,17 @@ test$Embarked <- as.character(test$Embarked)
 
 ```{r}
 listacc <- NULL
-for (i in (1:1000)) {
-    set.seed=i
+for (i in (53)) {
+    set.seed=36
     split <- sample.split(train$Survived, SplitRatio = 0.7)
     Titanictrain <- subset(train, split == TRUE)
     Titanictest <- subset(train, split == FALSE)
     TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch, data = Titanictrain, 
-        nodesize = 50, ntree = 2000)
+        nodesize = i, ntree = 2000)
     PredictRF <- predict(TitanicRF, newdata = Titanictest)
     tabla <- table(Titanictest$Survived, PredictRF)
     acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
-    #cat("set.seed=",i," acc=",acc,"\n")
+    #cat("nodesize=",i," acc=",acc,"\n")
     listacc[i] <- acc
     if (i %% 100 == 0) { cat(i)}
 }
@@ -74,6 +74,9 @@ plot(listacc)
 max(listacc)
 which.max(listacc)
 ```
+
+
+Create Submission.csv file for Kaggle
 
 ```{r}
 PredTest <- predict(TitanicRF, newdata=test, type="response")
