@@ -54,18 +54,19 @@ test$Embarked <- as.character(test$Embarked)
 
 ```{r}
 listacc <- NULL
-for (i in (202:202)) {
-set.seed=202
-split <- sample.split(train$Survived, SplitRatio = 0.7)
-Titanictrain <- subset(train, split == TRUE)
-Titanictest <- subset(train, split == FALSE)
-TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch, data = Titanictrain, nodesize = 50, ntree = 2000)
-PredictRF <- predict(TitanicRF, newdata = Titanictest)
-tabla <- table(Titanictest$Survived, PredictRF)
-acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
-#cat("set.seed=",i," acc=",acc,"\n")
-listacc[i] <- acc
-if (i %% 100 == 0) { cat(i)}
+for (i in (1:1000)) {
+    set.seed=i
+    split <- sample.split(train$Survived, SplitRatio = 0.7)
+    Titanictrain <- subset(train, split == TRUE)
+    Titanictest <- subset(train, split == FALSE)
+    TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch, data = Titanictrain, 
+        nodesize = 50, ntree = 2000)
+    PredictRF <- predict(TitanicRF, newdata = Titanictest)
+    tabla <- table(Titanictest$Survived, PredictRF)
+    acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
+    #cat("set.seed=",i," acc=",acc,"\n")
+    listacc[i] <- acc
+    if (i %% 100 == 0) { cat(i)}
 }
 acc
 tabla
