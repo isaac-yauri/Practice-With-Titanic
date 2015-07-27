@@ -133,7 +133,11 @@ test$Title[grep("Sir.", test$Name, fixed = TRUE)] <- "Sir.."
 test$Title[grep("Mlle.", test$Name, fixed = TRUE)] <- "Mlle."
 test$Title[grep("Capt.", test$Name, fixed = TRUE)] <- "Capt."
 test$Title[grep("the Countess.", test$Name, fixed = TRUE)] <- "the Countess."
+
 test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Dona."
+test <- test[-c(which(is.na(test$Title))), ] 
+which(test$Title == "NA")
+which(is.na(test$Title))
 
 train$Title <- as.factor(train$Title)
 test$Title <- as.factor(test$Title)
@@ -141,6 +145,7 @@ test$Title <- as.factor(test$Title)
 test[is.na(test$Title),]
 
 table(train$Title)
+table(test$Title)
 summary(train)
 summary(test)
 str(train)
