@@ -30,8 +30,6 @@ test <- read.csv("test.csv")
 Loading Libraries
 
 ```{r}
-library(rpart)
-library(rpart.plot)
 library(caTools)
 library(ROCR)
 library(caret)
@@ -133,6 +131,7 @@ test$Title[grep("Sir.", test$Name, fixed = TRUE)] <- "Sir.."
 test$Title[grep("Mlle.", test$Name, fixed = TRUE)] <- "Mlle."
 test$Title[grep("Capt.", test$Name, fixed = TRUE)] <- "Capt."
 test$Title[grep("the Countess.", test$Name, fixed = TRUE)] <- "the Countess."
+test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Dona."
 
 test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Dona."
 test <- test[-c(which(is.na(test$Title))), ] 
@@ -188,3 +187,28 @@ PredTest <- predict(TitanicRF, newdata=test, type="response")
 MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
 write.csv(MySubmission, "Submission.csv", row.names=FALSE)
 ```
+
+
+Using CART model
+
+```{r}
+library(rpart)
+library(rpart.plot)
+set.seed(2444)
+split <- sample.split(train$Survived, SplitRatio = 0.7)
+Titanictrain <- subset(train, split == TRUE)
+Titanictest <- subset(train, split == FALSE)
+TitanicCART <- rpart(Survived ~ Title, data = Titanictrain, method="class")
+PredictCART <- predict(titanicCART, newdata = Titanictest, type = "class")
+tabla <- table(Titanictest$Survived, PredictCART)
+acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
+acc
+tabla
+```
+
+```{r}
+PredTest <- predict(TitanicCART, newdata=test, type="response")
+MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
+write.csv(MySubmission, "Submission.csv", row.names=FALSE)
+```
+
