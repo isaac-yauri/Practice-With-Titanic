@@ -55,12 +55,12 @@ for (i in (1)) {
     split <- sample.split(train$Survived, SplitRatio = 0.7)
     Titanictrain <- subset(train, split == TRUE)
     Titanictest <- subset(train, split == FALSE)
-    TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch, data = Titanictrain, 
-        nodesize = 50, ntree = 2444)
+    TitanicRF <- randomForest(Survived ~ Pclass + Sex + Fare, data = Titanictrain, 
+        nodesize = 50, ntree = 2000)
     PredictRF <- predict(TitanicRF, newdata = Titanictest)
     tabla <- table(Titanictest$Survived, PredictRF)
     acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
-    #cat("ntree=",i," acc=",acc,"\n")
+    cat("ntree=",i," acc=",acc,"\n")
     listacc[i] <- acc
     if (i %% 100 == 0) { cat(i)}
 }
@@ -113,7 +113,7 @@ train$Title[grep("Col.", train$Name, fixed = TRUE)] <- "Col."
 train$Title[grep("Mme.", train$Name, fixed = TRUE)] <- "Mme."
 train$Title[grep("Ms.", train$Name, fixed = TRUE)] <- "Ms."
 train$Title[grep("Lady.", train$Name, fixed = TRUE)] <- "Lady."
-train$Title[grep("Sir.", train$Name, fixed = TRUE)] <- "Sir.."
+train$Title[grep("Sir.", train$Name, fixed = TRUE)] <- "Sir."
 train$Title[grep("Mlle.", train$Name, fixed = TRUE)] <- "Mlle."
 train$Title[grep("Capt.", train$Name, fixed = TRUE)] <- "Capt."
 train$Title[grep("the Countess.", train$Name, fixed = TRUE)] <- "the Countess."
@@ -132,19 +132,27 @@ test$Title[grep("Col.", test$Name, fixed = TRUE)] <- "Col."
 test$Title[grep("Mme..", test$Name, fixed = TRUE)] <- "Mme."
 test$Title[grep("Ms.", test$Name, fixed = TRUE)] <- "Ms."
 test$Title[grep("Lady.", test$Name, fixed = TRUE)] <- "Lady."
-test$Title[grep("Sir.", test$Name, fixed = TRUE)] <- "Sir.."
+test$Title[grep("Sir.", test$Name, fixed = TRUE)] <- "Sir."
 test$Title[grep("Mlle.", test$Name, fixed = TRUE)] <- "Mlle."
 test$Title[grep("Capt.", test$Name, fixed = TRUE)] <- "Capt."
 test$Title[grep("the Countess.", test$Name, fixed = TRUE)] <- "the Countess."
-test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Dona."
-
-test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Dona."
-test <- test[-c(which(is.na(test$Title))), ] 
-which(test$Title == "NA")
-which(is.na(test$Title))
-
+# Dona is in spanich. We need to chenge to Miss.
+test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Miss."
+# Observations with no FARE
+test[153, "Fare"] <- 8
 train$Title <- as.factor(train$Title)
 test$Title <- as.factor(test$Title)
+
+train[train$Ticket == "PC 17758",]
+
+
+which(is.na(test$Fare))
+test[153, "Fare"] <- 8
+test[150:158,]
+train[train$Pclass == 3 & train$Title == "Mr." & train$Embarked == "S", -c(4,5,11,12) ]
+train[694,]
+table(train$Embarked)
+which(is.na(test$Title))
 
 test[is.na(test$Title),]
 
@@ -171,7 +179,7 @@ for (i in (1)) {
     split <- sample.split(train$Survived, SplitRatio = 0.7)
     Titanictrain <- subset(train, split == TRUE)
     Titanictest <- subset(train, split == FALSE)
-    TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch + Fare, 
+    TitanicRF <- randomForest(Survived ~ Pclass + Sex + Fare + Title, 
                               data = Titanictrain, nodesize = 50, ntree = 2444)
     PredictRF <- predict(TitanicRF, newdata = Titanictest)
     tabla <- table(Titanictest$Survived, PredictRF)
