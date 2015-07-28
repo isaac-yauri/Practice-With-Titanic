@@ -114,9 +114,9 @@ train$Title[grep("Mme.", train$Name, fixed = TRUE)] <- "Mme."
 train$Title[grep("Ms.", train$Name, fixed = TRUE)] <- "Ms."
 train$Title[grep("Lady.", train$Name, fixed = TRUE)] <- "Lady."
 train$Title[grep("Sir.", train$Name, fixed = TRUE)] <- "Sir."
-train$Title[grep("Mlle.", train$Name, fixed = TRUE)] <- "Miss"
+train$Title[grep("Mlle.", train$Name, fixed = TRUE)] <- "Mlle."
 train$Title[grep("Capt.", train$Name, fixed = TRUE)] <- "Capt."
-train$Title[grep("the Countess.", train$Name, fixed = TRUE)] <- "Miss"
+train$Title[grep("the Countess.", train$Name, fixed = TRUE)] <- "the Countess"
 train$Title[grep("Dona.", train$Name, fixed = TRUE)] <- "Miss"
 
 test$Title[grep("Master.", test$Name, fixed = TRUE)] <- "Master."
@@ -133,15 +133,16 @@ test$Title[grep("Mme.", test$Name, fixed = TRUE)] <- "Mme."
 test$Title[grep("Ms.", test$Name, fixed = TRUE)] <- "Ms."
 test$Title[grep("Lady.", test$Name, fixed = TRUE)] <- "Lady."
 test$Title[grep("Sir.", test$Name, fixed = TRUE)] <- "Sir."
-test$Title[grep("Mlle.", test$Name, fixed = TRUE)] <- "Miss"
+test$Title[grep("Mlle.", test$Name, fixed = TRUE)] <- "Mlle."
 test$Title[grep("Capt.", test$Name, fixed = TRUE)] <- "Capt."
-test$Title[grep("the Countess.", test$Name, fixed = TRUE)] <- "Miss"
+test$Title[grep("the Countess.", test$Name, fixed = TRUE)] <- "the Countess"
 # Dona is in spanich. We need to chenge to Miss.
 test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Miss"
 # Observations with no FARE
 test[153, "Fare"] <- 8
 train$Title <- as.factor(train$Title)
 test$Title <- as.factor(test$Title)
+levels(test$Title) <- levels(train$Title)
 
 train[train$Ticket == "PC 17758",]
 
@@ -180,7 +181,7 @@ for (i in (1)) {
     Titanictrain <- subset(train, split == TRUE)
     Titanictest <- subset(train, split == FALSE)
     TitanicRF <- randomForest(Survived ~ Pclass + Sex + Fare + Title, 
-                              data = Titanictrain, nodesize = 50, ntree = 2444)
+                              data = Titanictrain, nodesize = 100, ntree = 2444)
     PredictRF <- predict(TitanicRF, newdata = Titanictest)
     tabla <- table(Titanictest$Survived, PredictRF)
     acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
