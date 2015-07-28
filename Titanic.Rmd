@@ -69,6 +69,11 @@ tabla
 plot(listacc)
 max(listacc)
 which.max(listacc)
+summary(train)
+summary(test)
+which(is.na(test$Fare))
+test[153, "Fare"] <- 0
+table(train$Embarked)
 ```
 
 
@@ -166,8 +171,8 @@ for (i in (1)) {
     split <- sample.split(train$Survived, SplitRatio = 0.7)
     Titanictrain <- subset(train, split == TRUE)
     Titanictest <- subset(train, split == FALSE)
-    TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch + Title, data = Titanictrain, 
-        nodesize = 50, ntree = 2444)
+    TitanicRF <- randomForest(Survived ~ Pclass + Sex + SibSp + Parch + Fare, 
+                              data = Titanictrain, nodesize = 50, ntree = 2444)
     PredictRF <- predict(TitanicRF, newdata = Titanictest)
     tabla <- table(Titanictest$Survived, PredictRF)
     acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
@@ -189,21 +194,27 @@ write.csv(MySubmission, "Submission.csv", row.names=FALSE)
 ```
 
 
-Using CART model
+Using K-means clustering
 
 ```{r}
-library(rpart)
-library(rpart.plot)
+k = 2
 set.seed(2444)
 split <- sample.split(train$Survived, SplitRatio = 0.7)
 Titanictrain <- subset(train, split == TRUE)
 Titanictest <- subset(train, split == FALSE)
-TitanicCART <- rpart(Survived ~ Title, data = Titanictrain, method="class")
+Titanictrain <- Titanictrain[, -6]
+summary(Titanictrain)
+
+KMC <- kmeans(Titanictrain$Title, centers = k)
+str(KMC)
+
+
 PredictCART <- predict(titanicCART, newdata = Titanictest, type = "class")
 tabla <- table(Titanictest$Survived, PredictCART)
 acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
 acc
 tabla
+prp(TitanicCART)
 ```
 
 ```{r}
