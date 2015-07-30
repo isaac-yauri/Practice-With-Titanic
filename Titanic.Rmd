@@ -96,7 +96,13 @@ test[which(is.na(test$Fare)), ]
 Looking prices for people with the same info.
 
 ```{r}
-train[train$Pclass == 3 & train$Embarked == "S" & train$Age > 50, "FARE" ]
+MissingFare <- mean(train[train$Pclass == 3 & train$Embarked == "S" & train$Age > 50, "Fare"], na.rm = TRUE)
+```
+
+Setting missing Fare with the average of people with the same characteristics.
+
+```{r}
+test[153, "Fare"] <- MissingFare
 ```
 
 ##Formating the Data
@@ -109,26 +115,12 @@ test$Pclass <- as.factor(test$Pclass)
 test$Embarked <- as.factor(test$Embarked)
 ```
 
-```{r}
-set.seed(2444)
-split <- sample.split(train$Survived, SplitRatio = 0.7)
-Titanictrain <- subset(train, split == TRUE)
-Titanictest <- subset(train, split == FALSE)
-TitanicRF <- randomForest(Survived ~ Pclass + Sex + Fare, data = Titanictrain, 
-        nodesize = 50, ntree = 2000)
-PredictRF <- predict(TitanicRF, newdata = Titanictest)
-tabla <- table(Titanictest$Survived, PredictRF)
-acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
-cat("acc=",acc,"\n")
-tabla
 
+
+```{r}
 summary(train)
 summary(test)
-which(is.na(test$Fare))
-test[153, "Fare"] <- 8
-table(train$Embarked)
 ```
-
 
 Create a Submission.csv file for Kaggle
 
