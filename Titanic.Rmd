@@ -59,7 +59,7 @@ only with a nanny, therefore parch=0 for them.  As well, some
 travelled with very close friends or neighbors in a village, however,
 the definitions do not support such relations.
 
-We start loading the data sets from Kaggle.
+##We start loading the data sets from Kaggle.
 
 ```{r}
 setwd("c:/EMC/Cursos/GitHub/Practice-With-Titanic/")
@@ -67,7 +67,7 @@ train <- read.csv("train.csv")
 test <- read.csv("test.csv")
 ```
 
-Loading Libraries
+##Loading Libraries
 
 ```{r}
 library(caTools)
@@ -78,7 +78,28 @@ library(randomForest)
 library(flexclust)
 ```
 
-Formating the Data
+##Review Data
+
+```{r}
+summary(train)
+summary(test)
+```
+
+We can see a missing info in Fare varible for test dataset.
+We need to set a guess price for this observation. Options are: minimun price, maximum price, average price.
+But, we can investigate about this person to figure out better what was the Fare.
+
+```{r}
+test[which(is.na(test$Fare)), ]
+```
+
+Looking prices for people with the same info.
+
+```{r}
+train[train$Pclass == 3 & train$Embarked == "S" & train$Age > 50, "FARE" ]
+```
+
+##Formating the Data
 
 ```{r}
 train$Survived <- as.factor(train$Survived)
@@ -104,7 +125,7 @@ tabla
 summary(train)
 summary(test)
 which(is.na(test$Fare))
-test[153, "Fare"] <- 0
+test[153, "Fare"] <- 8
 table(train$Embarked)
 ```
 
@@ -182,7 +203,7 @@ train[train$Ticket == "PC 17758",]
 which(is.na(test$Fare))
 test[153, "Fare"] <- 8
 test[150:158,]
-train[train$Pclass == 3 & train$Title == "Mr." & train$Embarked == "S", -c(4,5,11,12) ]
+train[train$Pclass == 3 & train$Embarked == "S" & train$Age > 50, "FARE" ]
 train[694,]
 table(train$Embarked)
 which(is.na(test$Title))
