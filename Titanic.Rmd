@@ -85,8 +85,30 @@ summary(train)
 summary(test)
 ```
 
-We have missing values on Age (train and test Dataset) and Fare (test Dataset) variables.
+##Analizing data
 
+1. Age: We have many missing values on train and test datasets.
+2. Fare: We have 1 missing value on test dataset.
+3. Embarked: We have 2 observations with "blank" value on train dataset.
+
+##Random Forest
+
+We can use all the variables, but these incomplete variables. 
+
+```{r}
+TitanicRF <- randomForest(as.factor(Survived) ~ Pclass + Sex + SibSp + Parch, 
+                              data = train, nodesize = 100, ntree = 2444, importance = TRUE)
+PredictRF <- predict(TitanicRF, newdata = test)
+PredTest <- predict(TitanicRF, newdata=test, type="response")
+MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
+write.csv(MySubmission, "Submission1.csv", row.names=FALSE)
+```
+
+
+
+```{r}
+varImpPlot(TitanicRF)
+```
 ##Working to set missing Fare value for test dataset
 
 We need to set a guess price (Fare) for this observation. Options are: minimun price, maximum price, average price.
@@ -100,6 +122,7 @@ Looking prices for people with the same info.
 
 ```{r}
 MissingFare <- mean(train[train$Pclass == 3 & train$Embarked == "S" & train$Age > 50, "Fare"], na.rm = TRUE)
+MissingFare
 ```
 
 Setting missing Fare with the average of people with the same characteristics.
@@ -119,24 +142,13 @@ test$Embarked <- as.factor(test$Embarked)
 ```
 
 ##Create a Submission.csv file for Kaggle
-We receive 0.77990 with this submission.
 
 ```{r}
 PredTest <- predict(TitanicRF, newdata=test, type="response")
 MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
 write.csv(MySubmission, "Submission.csv", row.names=FALSE)
 ```
-
-```{r}
-table(train$Survived, train$Sex)
-female <- subset(train, Sex == "female")
-table(female$Survived, female$Parch)
-str(train)
-table(train$Parch, train$Survived)
-summary(TitanicRF)
-table(train$Age)
-summary(train$Age)
-```
+We receive 0.77990 with this submission.
 
 ##Trying to solve missing Age info.
 
@@ -200,22 +212,18 @@ test$Title <- as.factor(test$Title)
 
 # Copying Factors to test dataset
 levels(test$Title) <- levels(train$Title)
+```
 
-train[train$Ticket == "PC 17758",]
+#Setting Age variable for missing values
 
+```{r}
+train[is.na(train$Age) & train$SibSp > 0 & train$Title == "Master.", c("Sex","Age")]
 
+MeanAge <- mean(train$Age, na.rm=TRUE)
+train[is.na(train$Age), "Age"] <- MeanAge
+test[is.na(test$Age), "Age"] <- MeanAge
 summary(train)
 summary(test)
-str(train)
-str(test)
-table(train$Title, train$Survived)
-table(test$Title)
-train$Title
-table(train$Age, train$Title)
-summary(test$Age)      
-table(train$Title == "Major.")
-train[train$Title == "Master.",]
-train[is.na(train$Age)  & train$Title == "Master.",] 
 ```
 
 ```{r}
@@ -225,7 +233,7 @@ for (i in (1)) {
     split <- sample.split(train$Survived, SplitRatio = 0.7)
     Titanictrain <- subset(train, split == TRUE)
     Titanictest <- subset(train, split == FALSE)
-    TitanicRF <- randomForest(Survived ~ Pclass + Sex + Fare + Title, 
+    TitanicRF <- randomForest(Survived ~ Pclass + Sex + Fare + Age, 
                               data = Titanictrain, nodesize = 100, ntree = 2444)
     PredictRF <- predict(TitanicRF, newdata = Titanictest)
     tabla <- table(Titanictest$Survived, PredictRF)
