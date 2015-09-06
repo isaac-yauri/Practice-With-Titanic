@@ -197,7 +197,7 @@ If we check some names, we can observe that they have their Title embedded. For 
 Checking all "masters" in training data.
 
 ```{r}
-train[grep("Master.", train$Name, fixed = TRUE), ]
+train[grep("Master.", train$Name, fixed = TRUE), c("Name", "Age")]
 ```
 
 checking their ages
