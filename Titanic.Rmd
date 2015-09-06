@@ -70,12 +70,7 @@ test <- read.csv("test.csv")
 ##Loading Libraries
 
 ```{r}
-library(caTools)
-library(ROCR)
-library(caret)
-library(e1071)
 library(randomForest)
-library(flexclust)
 ```
 
 ##Review Data
@@ -93,7 +88,7 @@ summary(test)
 
 ##Random Forest
 
-We can use all the variables, but these incomplete variables. 
+To submit our Prediction, we can use Random Forest with all variables, but we will recive a message error because some of them are imcomplete. So, we need to use only Pclass, Sex, Sibsp and Parch. 
 
 ```{r}
 TitanicRF <- randomForest(as.factor(Survived) ~ Pclass + Sex + SibSp + Parch, 
@@ -104,15 +99,22 @@ MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
 write.csv(MySubmission, "Submission1.csv", row.names=FALSE)
 ```
 
+But you will obtain and score of 0.77512 with this submission.
 
+checking importance of variables
 
 ```{r}
 varImpPlot(TitanicRF)
 ```
-##Working to set missing Fare value for test dataset
 
-We need to set a guess price (Fare) for this observation. Options are: minimun price, maximum price, average price.
-But, we can investigate about this person to figure out better what was the Fare.
+Looks like Pclass and Sex are the most important variables.
+
+To improve a better score, we need to solve those missing values
+
+##Inputting missing Fare value for test dataset
+
+We need to set a guess price (Fare) for this observation.
+Investigate about this person to figure out better what was the Fare.
 
 ```{r}
 test[which(is.na(test$Fare)), ]
@@ -121,7 +123,7 @@ test[which(is.na(test$Fare)), ]
 Looking prices for people with the same info.
 
 ```{r}
-MissingFare <- mean(train[train$Pclass == 3 & train$Embarked == "S" & train$Age > 50, "Fare"], na.rm = TRUE)
+MissingFare <- median(train[train$Pclass == 3 & train$Embarked == "S" & train$Age > 50 & train$Sex == "male", "Fare"], na.rm = TRUE)
 MissingFare
 ```
 
@@ -131,84 +133,116 @@ Setting missing Fare with the average of people with the same characteristics.
 test[153, "Fare"] <- MissingFare
 ```
 
-##Convertir to Factor for Rain Forrest algorith
+Creating a new Random Forest adding Fare variable.
 
 ```{r}
-train$Survived <- as.factor(train$Survived)
-train$Pclass <- as.factor(train$Pclass)
-train$Embarked <- as.factor(train$Embarked)
-test$Pclass <- as.factor(test$Pclass)
-test$Embarked <- as.factor(test$Embarked)
-```
-
-##Create a Submission.csv file for Kaggle
-
-```{r}
+TitanicRF <- randomForest(as.factor(Survived) ~ Pclass + Sex + SibSp + Parch + Fare, 
+                              data = train, nodesize = 50, ntree = 2444, importance = TRUE)
+PredictRF <- predict(TitanicRF, newdata = test)
 PredTest <- predict(TitanicRF, newdata=test, type="response")
 MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
-write.csv(MySubmission, "Submission.csv", row.names=FALSE)
+write.csv(MySubmission, "Submission2.csv", row.names=FALSE)
 ```
-We receive 0.77990 with this submission.
+
+We receive 0.78469 with this submission.
+
+```{r}
+varImpPlot(TitanicRF)
+```
+
+##Inputting Embarked value on train dataset
+
+checking what is the observation with missing Embarked variable
+
+```{r}
+train[train$Embarked == "", ]
+```
+
+Looking similarities
+
+```{r}
+table(train[train$Survived == 1 & train$Pclass == 1, "Embarked"])
+```
+
+we can inputting a value "S" (Southampton) because is a mayority.
+
+```{r}
+train$Embarked[c(62,830)] = "S"
+train$Embarked <- factor(train$Embarked)
+```
+
+train$Embarked <- factor(train$Embarked)
+
+```{r}
+TitanicRF <- randomForest(as.factor(Survived) ~ Pclass + Sex + SibSp + Parch + Fare + Embarked, 
+                              data = train, nodesize = 50, ntree = 2444, importance = TRUE)
+PredictRF <- predict(TitanicRF, newdata = test)
+PredTest <- predict(TitanicRF, newdata=test, type="response")
+MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
+write.csv(MySubmission, "Submission3.csv", row.names=FALSE)
+```
+
+No improvement with Embarked.
+
+```{r}
+varImpPlot(TitanicRF)
+```
 
 ##Trying to solve missing Age info.
 
-To guess what might have been the Age values, we need to:
+If we check some names, we can observe that they have their Title embedded. For example "master"
 
-Set the Age calculating the average of people who have the same caracteristics like: Sex, Class, Fare and Embarked.
-We can add a differentiator like Title (Miss, Mrs., Ms., Mme., for example.). To do this, we need to create a new varible and find this characteristic inside the name:
+"Master is an English honorific for boys and young men."
+
+Checking all "masters" in training data.
 
 ```{r}
-head(train$Name)
+train[grep("Master.", train$Name, fixed = TRUE), ]
 ```
+
+checking their ages
+
+
+```{r}
+summary(train$Age[grep("Master.", train$Name, fixed = TRUE)])
+```
+
+So, is a good idea setting the Median to those missing values.
+And we can use their Title (and other variables) to set those missing values.
+
+To do this, we need to create a new varible and find this characteristic inside the name (Miss, Mrs., Ms., Mme., for example.)
 
 ##Creating variable Title
 
+for this case, we need to merge both sets, but considering number of variables.
+
 ```{r}
-train$Title <- NA
-test$Title <- NA
+all_set <- rbind(train[, -2], test)
 
-train$Title[grep("Master.", train$Name, fixed = TRUE)] <- "Master."
-train$Title[grep("Miss", train$Name, fixed = TRUE)] <- "Miss"
-train$Title[grep("Mr.", train$Name, fixed = TRUE)] <- "Mr."
-train$Title[grep("Mrs.", train$Name, fixed = TRUE)] <- "Mrs."
-train$Title[grep("Rev.", train$Name, fixed = TRUE)] <- "Rev."
-train$Title[grep("Don.", train$Name, fixed = TRUE)] <- "Don."
-train$Title[grep("Dr.", train$Name, fixed = TRUE)] <- "Dr."
-train$Title[grep("Major.", train$Name, fixed = TRUE)] <- "Major."
-train$Title[grep("Jonkheer", train$Name, fixed = TRUE)] <- "Jonkheer"
-train$Title[grep("Col.", train$Name, fixed = TRUE)] <- "Col."
-train$Title[grep("Mme.", train$Name, fixed = TRUE)] <- "Mme."
-train$Title[grep("Ms.", train$Name, fixed = TRUE)] <- "Ms."
-train$Title[grep("Lady.", train$Name, fixed = TRUE)] <- "Lady."
-train$Title[grep("Sir.", train$Name, fixed = TRUE)] <- "Sir."
-train$Title[grep("Mlle.", train$Name, fixed = TRUE)] <- "Mlle."
-train$Title[grep("Capt.", train$Name, fixed = TRUE)] <- "Capt."
-train$Title[grep("the Countess.", train$Name, fixed = TRUE)] <- "the Countess"
-train$Title[grep("Dona.", train$Name, fixed = TRUE)] <- "Miss"
+all_set$Title <- NA
 
-test$Title[grep("Master.", test$Name, fixed = TRUE)] <- "Master."
-test$Title[grep("Miss", test$Name, fixed = TRUE)] <- "Miss"
-test$Title[grep("Mr.", test$Name, fixed = TRUE)] <- "Mr."
-test$Title[grep("Mrs.", test$Name, fixed = TRUE)] <- "Mrs."
-test$Title[grep("Rev.", test$Name, fixed = TRUE)] <- "Rev."
-test$Title[grep("Don.", test$Name, fixed = TRUE)] <- "Don."
-test$Title[grep("Dr.", test$Name, fixed = TRUE)] <- "Dr."
-test$Title[grep("Major.", test$Name, fixed = TRUE)] <- "Major."
-test$Title[grep("Jonkheer", test$Name, fixed = TRUE)] <- "Jonkheer"
-test$Title[grep("Col.", test$Name, fixed = TRUE)] <- "Col."
-test$Title[grep("Mme.", test$Name, fixed = TRUE)] <- "Mme."
-test$Title[grep("Ms.", test$Name, fixed = TRUE)] <- "Ms."
-test$Title[grep("Lady.", test$Name, fixed = TRUE)] <- "Lady."
-test$Title[grep("Sir.", test$Name, fixed = TRUE)] <- "Sir."
-test$Title[grep("Mlle.", test$Name, fixed = TRUE)] <- "Mlle."
-test$Title[grep("Capt.", test$Name, fixed = TRUE)] <- "Capt."
-test$Title[grep("the Countess.", test$Name, fixed = TRUE)] <- "the Countess"
-# Dona is in spanich. We need change to Miss.
-test$Title[grep("Dona.", test$Name, fixed = TRUE)] <- "Miss"
+all_set$Title[grep("Master.", all_set$Name, fixed = TRUE)] <- "Master."
+all_set$Title[grep("Miss", all_set$Name, fixed = TRUE)] <- "Miss"
+all_set$Title[grep("Mr.", all_set$Name, fixed = TRUE)] <- "Mr."
+all_set$Title[grep("Mrs.", all_set$Name, fixed = TRUE)] <- "Mrs."
+all_set$Title[grep("Rev.", all_set$Name, fixed = TRUE)] <- "Rev."
+all_set$Title[grep("Don.", all_set$Name, fixed = TRUE)] <- "Don."
+all_set$Title[grep("Dr.", all_set$Name, fixed = TRUE)] <- "Dr."
+all_set$Title[grep("Major.", all_set$Name, fixed = TRUE)] <- "Major."
+all_set$Title[grep("Jonkheer", all_set$Name, fixed = TRUE)] <- "Jonkheer"
+all_set$Title[grep("Col.", all_set$Name, fixed = TRUE)] <- "Col."
+all_set$Title[grep("Mme.", all_set$Name, fixed = TRUE)] <- "Mme."
+all_set$Title[grep("Ms.", all_set$Name, fixed = TRUE)] <- "Ms."
+all_set$Title[grep("Lady.", all_set$Name, fixed = TRUE)] <- "Lady."
+all_set$Title[grep("Sir.", all_set$Name, fixed = TRUE)] <- "Sir."
+all_set$Title[grep("Mlle.", all_set$Name, fixed = TRUE)] <- "Mlle."
+all_set$Title[grep("Capt.", all_set$Name, fixed = TRUE)] <- "Capt."
+all_set$Title[grep("the Countess.", all_set$Name, fixed = TRUE)] <- "the Countess"
+# Dona is spanish. We need change to Miss.
+all_set$Title[grep("Dona.", all_set$Name, fixed = TRUE)] <- "Miss"
 
 # Set a factor for this new variable
-train$Title <- as.factor(train$Title)
-test$Title <- as.factor(test$Title)
+all_set$Title <- as.factor(all_set$Title)
 
 # Copying Factors to test dataset
 levels(test$Title) <- levels(train$Title)
@@ -217,71 +251,35 @@ levels(test$Title) <- levels(train$Title)
 #Setting Age variable for missing values
 
 ```{r}
-train[is.na(train$Age) & train$SibSp > 0 & train$Title == "Master.", c("Sex","Age")]
+library(rpart)
 
-MeanAge <- mean(train$Age, na.rm=TRUE)
-train[is.na(train$Age), "Age"] <- MeanAge
-test[is.na(test$Age), "Age"] <- MeanAge
-summary(train)
-summary(test)
+age_rpart <- rpart(Age ~ Pclass + Sex + SibSp + Parch + Fare + Embarked + Title, data = all_set[!is.na(all_set$Age),], method = "anova")
+
+all_set$Age[is.na(all_set$Age)] <- predict(age_rpart, all_set[is.na(all_set$Age),])
 ```
 
-```{r}
-listacc <- NULL
-for (i in (1)) {
-    set.seed(2444)
-    split <- sample.split(train$Survived, SplitRatio = 0.7)
-    Titanictrain <- subset(train, split == TRUE)
-    Titanictest <- subset(train, split == FALSE)
-    TitanicRF <- randomForest(Survived ~ Pclass + Sex + Fare + Age, 
-                              data = Titanictrain, nodesize = 100, ntree = 2444)
-    PredictRF <- predict(TitanicRF, newdata = Titanictest)
-    tabla <- table(Titanictest$Survived, PredictRF)
-    acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
-    #cat("ntree=",i," acc=",acc,"\n")
-    listacc[i] <- acc
-    if (i %% 100 == 0) { cat(i)}
-}
-acc
-tabla
-plot(listacc)
-max(listacc)
-which.max(listacc)
-```
+##Splitting data sets
 
 ```{r}
+train$Age <- all_set[1:891, "Age"]
+train$Title <- all_set[1:891, "Title"]
+test <- all_set[892:1309, ]
+```
+
+##Creating a new prediction
+
+```{r}
+TitanicRF <- randomForest(as.factor(Survived) ~ Pclass + Sex + SibSp + Parch + Fare + Embarked + Age + Title, 
+                              data = train, nodesize = 25, ntree = 2444, importance = TRUE)
+PredictRF <- predict(TitanicRF, newdata = test)
 PredTest <- predict(TitanicRF, newdata=test, type="response")
 MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
-write.csv(MySubmission, "Submission.csv", row.names=FALSE)
+write.csv(MySubmission, "Submission4.csv", row.names=FALSE)
 ```
 
-
-Using K-means clustering
-
-```{r}
-k = 2
-set.seed(2444)
-split <- sample.split(train$Survived, SplitRatio = 0.7)
-Titanictrain <- subset(train, split == TRUE)
-Titanictest <- subset(train, split == FALSE)
-Titanictrain <- Titanictrain[, -6]
-summary(Titanictrain)
-
-KMC <- kmeans(Titanictrain$Title, centers = k)
-str(KMC)
-
-
-PredictCART <- predict(titanicCART, newdata = Titanictest, type = "class")
-tabla <- table(Titanictest$Survived, PredictCART)
-acc <- (tabla[1,1] + tabla[2,2])/nrow(Titanictest)
-acc
-tabla
-prp(TitanicCART)
-```
+We receive 0.80383 with this submission.
 
 ```{r}
-PredTest <- predict(TitanicCART, newdata=test, type="response")
-MySubmission <- data.frame(PassengerID = test$PassengerId, Survived = PredTest)
-write.csv(MySubmission, "Submission.csv", row.names=FALSE)
+varImpPlot(TitanicRF)
 ```
 
