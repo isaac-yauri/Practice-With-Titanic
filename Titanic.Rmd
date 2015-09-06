@@ -282,4 +282,3 @@ We receive 0.80383 with this submission.
 ```{r}
 varImpPlot(TitanicRF)
 ```
-
