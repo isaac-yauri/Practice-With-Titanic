@@ -389,6 +389,7 @@ write.csv(MySubmission, &quot;Submission3.csv&quot;, row.names=FALSE)</code></pr
 <pre class="r"><code>all_set &lt;- rbind(train[, -2], test)
 
 all_set$Title &lt;- NA
+all_set$Alias &lt;- 0
 
 all_set$Title[grep(&quot;Master.&quot;, all_set$Name, fixed = TRUE)] &lt;- &quot;Master.&quot;
 all_set$Title[grep(&quot;Miss&quot;, all_set$Name, fixed = TRUE)] &lt;- &quot;Miss&quot;
@@ -409,6 +410,7 @@ all_set$Title[grep(&quot;Capt.&quot;, all_set$Name, fixed = TRUE)] &lt;- &quot;C
 all_set$Title[grep(&quot;the Countess.&quot;, all_set$Name, fixed = TRUE)] &lt;- &quot;the Countess&quot;
 # Dona is spanish. We need change to Miss.
 all_set$Title[grep(&quot;Dona.&quot;, all_set$Name, fixed = TRUE)] &lt;- &quot;Miss&quot;
+all_set$Alias[grep(&quot;(&quot;, all_set$Name, fixed = TRUE)] &lt;- 1
 
 # Set a factor for this new variable
 all_set$Title &lt;- as.factor(all_set$Title)
@@ -428,6 +430,7 @@ all_set$Age[is.na(all_set$Age)] &lt;- predict(age_rpart, all_set[is.na(all_set$A
 <h2>Splitting data sets</h2>
 <pre class="r"><code>train$Age &lt;- all_set[1:891, &quot;Age&quot;]
 train$Title &lt;- all_set[1:891, &quot;Title&quot;]
+train$Alias &lt;- all_set[1:891, &quot;Alias&quot;]
 test &lt;- all_set[892:1309, ]</code></pre>
 </div>
 <div id="creating-a-new-prediction" class="section level2">

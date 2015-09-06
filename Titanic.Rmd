@@ -220,6 +220,7 @@ for this case, we need to merge both sets, but considering number of variables.
 all_set <- rbind(train[, -2], test)
 
 all_set$Title <- NA
+all_set$Alias <- 0
 
 all_set$Title[grep("Master.", all_set$Name, fixed = TRUE)] <- "Master."
 all_set$Title[grep("Miss", all_set$Name, fixed = TRUE)] <- "Miss"
@@ -240,6 +241,7 @@ all_set$Title[grep("Capt.", all_set$Name, fixed = TRUE)] <- "Capt."
 all_set$Title[grep("the Countess.", all_set$Name, fixed = TRUE)] <- "the Countess"
 # Dona is spanish. We need change to Miss.
 all_set$Title[grep("Dona.", all_set$Name, fixed = TRUE)] <- "Miss"
+all_set$Alias[grep("(", all_set$Name, fixed = TRUE)] <- 1
 
 # Set a factor for this new variable
 all_set$Title <- as.factor(all_set$Title)
@@ -263,6 +265,7 @@ all_set$Age[is.na(all_set$Age)] <- predict(age_rpart, all_set[is.na(all_set$Age)
 ```{r}
 train$Age <- all_set[1:891, "Age"]
 train$Title <- all_set[1:891, "Title"]
+train$Alias <- all_set[1:891, "Alias"]
 test <- all_set[892:1309, ]
 ```
 
