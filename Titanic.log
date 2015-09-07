@@ -1,0 +1,2717 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2015.9.7)  7 SEP 2015 13:05
+entering extended mode
+**c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md
+(c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:5: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:7: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:8: You can't use `macro p
+arameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:22: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:22: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:39: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:39: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:62: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:62: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (60.73204pt too wide) in paragraph at lines 65--70
+[]\tenrm ```r setwd("c:/EMC/Cursos/GitHub/Practice-With-Titanic/") train <- rea
+d.csv("train.csv") test <- read.csv("test.csv")|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm \ (ligature ``)
+.\tenrm `
+.\tenrm r
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:71: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:71: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:79: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:79: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:83: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:83: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:84: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:84: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:87: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:87: You can't use `macro 
+parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:95: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:95: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:96: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:96: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:97: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:97: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:98: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:98: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:99: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:99: You can't use `macro 
+parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:100: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:100: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:101: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:101: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:102: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:102: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:103: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:103: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:104: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:104: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:105: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:105: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:106: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:106: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:107: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:107: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:108: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:108: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:109: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:109: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:110: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:110: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:111: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:111: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:112: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:112: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:113: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:113: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:114: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:114: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:115: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:115: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:116: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:116: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:117: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:117: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:118: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:118: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:119: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:119: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:120: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:120: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:121: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:121: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:122: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:122: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:123: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:123: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:124: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:124: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:125: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:125: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:126: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:126: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:134: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:134: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:135: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:135: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:136: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:136: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:137: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:137: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:138: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:138: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:139: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:139: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:140: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:140: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:141: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:141: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:142: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:142: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:143: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:143: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:144: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:144: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:145: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:145: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:146: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:146: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:147: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:147: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:148: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:148: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:149: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:149: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:150: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:150: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:151: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:151: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:152: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:152: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:153: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:153: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:154: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:154: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:155: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:155: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:156: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:156: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:157: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:157: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:158: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:158: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:159: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:159: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:160: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:160: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:161: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:161: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:162: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:162: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:163: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:163: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:164: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:164: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:165: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:165: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:168: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:168: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:174: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:174: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:187: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:203: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:203: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:212: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:214: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:214: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:215: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:215: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:216: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:216: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:217: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:217: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:224: Misplaced alignment 
+tab character &
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:224: Misplaced alignment 
+tab character &
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:224: Misplaced alignment 
+tab character &
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:229: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:229: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:250: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:260: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:260: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:268: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:270: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:270: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:271: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:271: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:272: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:272: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:273: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:273: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:274: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:274: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:275: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:275: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+[2]
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:282: Misplaced alignment 
+tab character &
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:286: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:286: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:287: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:287: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:288: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:288: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:298: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:310: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (12.357pt too wide) in paragraph at lines 302--310
+\tenrm test) PredTest <- pre-dict(TitanicRF, new-data=test, type="response") My
+-Sub-mis-sion <- data.frame(PassengerID|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm t
+.\tenrm e
+.\tenrm s
+.\tenrm t
+.\tenrm )
+.etc.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:320: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:320: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:332: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:334: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:334: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:335: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:335: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:336: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:336: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:337: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:337: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:338: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:338: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:339: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:339: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:340: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:340: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:341: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:341: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:342: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:342: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:343: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:343: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:344: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:344: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:345: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:345: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:346: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:346: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:347: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:347: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:348: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:348: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:349: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:349: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:350: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:350: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:351: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:351: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:352: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:352: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:353: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:353: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:354: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:354: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:355: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:355: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:356: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:356: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:357: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:357: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:358: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:358: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:359: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:359: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:360: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:360: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:361: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:361: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:362: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:362: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:363: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:363: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:364: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:364: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:365: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:365: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:366: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:366: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:367: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:367: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:368: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:368: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:369: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:369: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:370: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:370: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:371: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:371: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:372: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:372: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:373: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:373: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:374: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:374: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:386: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:386: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:387: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:387: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:395: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:395: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:401: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:402: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:403: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:404: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:406: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:406: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:407: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:407: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:408: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:408: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:409: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:409: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:410: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:410: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:411: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:411: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:412: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:412: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:413: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:413: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:414: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:414: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:415: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:415: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:416: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:416: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:417: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:417: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:418: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:418: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:419: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:419: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:420: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:420: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:421: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:421: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:422: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:422: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:423: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:424: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:424: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:425: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:425: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (2.24483pt too wide) in paragraph at lines 406--426
+[]\tenrm all$[]\teni et$\tenrm Title[grep("Master.", all$[]\teni et$\tenrm Name
+, fixed = TRUE)] <- "Mas-ter." all$[]\teni et$\tenrm Title[grep("Miss", all$[]\
+teni et$\tenrm Name,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm a
+.\tenrm l
+.\tenrm l
+.\mathon
+.etc.
+
+
+Overfull \hbox (5.0076pt too wide) in paragraph at lines 406--426
+\tenrm fixed = TRUE)] <- "Miss" all$[]\teni et$\tenrm Title[grep("Mr.", all$[]\
+teni et$\tenrm Name, fixed = TRUE)] <- "Mr." all$[]\teni et$\tenrm Title[grep("
+Mrs.",|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm  (ligature fi)
+.\tenrm x
+.\tenrm e
+.\tenrm d
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+
+Overfull \hbox (13.2021pt too wide) in paragraph at lines 406--426
+\tenrm TRUE)] <- "Dr." all$[]\teni et$\tenrm Title[grep("Major.", all$[]\teni e
+t$\tenrm Name, fixed = TRUE)] <- "Ma-jor." all$[]\teni et$\tenrm Title[grep("Jo
+nkheer",|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm T
+.\tenrm R
+.\kern-0.27779
+.\tenrm U
+.\tenrm E
+.etc.
+
+
+Overfull \hbox (3.18933pt too wide) in paragraph at lines 406--426
+\tenrm all$[]\teni et$\tenrm Title[grep("Capt.", all$[]\teni et$\tenrm Name, fi
+xed = TRUE)] <- "Capt." all$[]\teni et$\tenrm Title[grep("the Count-ess.", all$
+[]\teni et$\tenrm Name,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm a
+.\tenrm l
+.\tenrm l
+.\mathon
+.\hbox(3.01389+0.0)x4.27432, shifted 1.49998
+..\seveni s
+.etc.
+
+
+[3]
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:427: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:428: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:428: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:430: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:434: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:442: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:442: You can't use `macro
+ parameter character #' in horizontal mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:446: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:448: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:448: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:448: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:451: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:451: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:456: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:457: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:460: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (40.00386pt too wide) in paragraph at lines 454--460
+[]\tenrm ```r train$\teni Age < \tensy  \teni all[]et\tenrm [1 : 891\teni ; \te
+nrm "\teni Age\tenrm "]\teni train$\tenrm Title <- all$[]\teni et\tenrm [1 : 89
+1\teni ; \tenrm "\teni Title\tenrm "]\teni train$\tenrm Alias <- all$[]\teni et
+\tenrm [1 : 891\teni ; \tenrm "\teni Alias\tenrm "]\teni test <|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm \ (ligature ``)
+.\tenrm `
+.\tenrm r
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:461: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:461: You can't use `macro
+ parameter character #' in vertical mode
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+c:/EMC/Cursos/GitHub/Practice-With-Titanic/Titanic.md:472: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (136.56125pt too wide) in paragraph at lines 464--472
+\tenrm mis-sion <- data.frame(PassengerID = test$\teni PassengerId; Survived \t
+enrm = \teni PredTest\tenrm )\teni write:csv\tenrm (\teni MySubmission; \tenrm 
+"\teni Submission\tenrm 4\teni :csv\tenrm "\teni ; row:names \tenrm =|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm m
+.\tenrm i
+.\tenrm s
+.\discretionary
+..\tenrm -
+.\tenrm s
+.etc.
+
+)
+! Emergency stop
+*** (job aborted, no legal \end found)
+
+!  ==> Fatal error occurred, no output PDF file produced!
